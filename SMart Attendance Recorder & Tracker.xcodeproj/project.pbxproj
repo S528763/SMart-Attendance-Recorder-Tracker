@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1F89DB571F86ABD2009E5C3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F89DB561F86ABD2009E5C3F /* AppDelegate.swift */; };
-		1F89DB591F86ABD2009E5C3F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F89DB581F86ABD2009E5C3F /* FirstViewController.swift */; };
+		1F89DB591F86ABD2009E5C3F /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F89DB581F86ABD2009E5C3F /* LoginPageViewController.swift */; };
 		1F89DB5B1F86ABD2009E5C3F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F89DB5A1F86ABD2009E5C3F /* SecondViewController.swift */; };
 		1F89DB5E1F86ABD2009E5C3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F89DB5C1F86ABD2009E5C3F /* Main.storyboard */; };
 		1F89DB601F86ABD2009E5C3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F89DB5F1F86ABD2009E5C3F /* Assets.xcassets */; };
@@ -37,7 +37,7 @@
 /* Begin PBXFileReference section */
 		1F89DB531F86ABD2009E5C3F /* SMart Attendance Recorder & Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SMart Attendance Recorder & Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F89DB561F86ABD2009E5C3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1F89DB581F86ABD2009E5C3F /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		1F89DB581F86ABD2009E5C3F /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 		1F89DB5A1F86ABD2009E5C3F /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		1F89DB5D1F86ABD2009E5C3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1F89DB5F1F86ABD2009E5C3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				1F89DB561F86ABD2009E5C3F /* AppDelegate.swift */,
-				1F89DB581F86ABD2009E5C3F /* FirstViewController.swift */,
+				1F89DB581F86ABD2009E5C3F /* LoginPageViewController.swift */,
 				1F89DB5A1F86ABD2009E5C3F /* SecondViewController.swift */,
 				1F89DB5C1F86ABD2009E5C3F /* Main.storyboard */,
 				1F89DB5F1F86ABD2009E5C3F /* Assets.xcassets */,
@@ -264,7 +264,7 @@
 			files = (
 				1F89DB5B1F86ABD2009E5C3F /* SecondViewController.swift in Sources */,
 				1F89DB571F86ABD2009E5C3F /* AppDelegate.swift in Sources */,
-				1F89DB591F86ABD2009E5C3F /* FirstViewController.swift in Sources */,
+				1F89DB591F86ABD2009E5C3F /* LoginPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
