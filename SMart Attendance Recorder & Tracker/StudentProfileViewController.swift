@@ -1,5 +1,5 @@
 //
-//  Tab4ViewController.swift
+//  StudentProfileViewController.swift
 //  SMart Attendance Recorder & Tracker
 //
 //  Created by Moody,Christopher L on 10/5/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Tab4ViewController: UIViewController {
+class StudentProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

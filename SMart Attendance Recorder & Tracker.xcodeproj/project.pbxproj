@@ -15,8 +15,8 @@
 		1F89DB631F86ABD2009E5C3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F89DB611F86ABD2009E5C3F /* LaunchScreen.storyboard */; };
 		1F89DB6E1F86ABD2009E5C3F /* SMart_Attendance_Recorder___TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F89DB6D1F86ABD2009E5C3F /* SMart_Attendance_Recorder___TrackerTests.swift */; };
 		1F89DB791F86ABD2009E5C3F /* SMart_Attendance_Recorder___TrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F89DB781F86ABD2009E5C3F /* SMart_Attendance_Recorder___TrackerUITests.swift */; };
-		9E296B471F86C03500B29AD7 /* Tab3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E296B461F86C03500B29AD7 /* Tab3ViewController.swift */; };
-		9E296B491F86C04F00B29AD7 /* Tab4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E296B481F86C04F00B29AD7 /* Tab4ViewController.swift */; };
+		9E296B471F86C03500B29AD7 /* AttendanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E296B461F86C03500B29AD7 /* AttendanceViewController.swift */; };
+		9E296B491F86C04F00B29AD7 /* StudentProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E296B481F86C04F00B29AD7 /* StudentProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +51,8 @@
 		1F89DB741F86ABD2009E5C3F /* SMart Attendance Recorder & TrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SMart Attendance Recorder & TrackerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F89DB781F86ABD2009E5C3F /* SMart_Attendance_Recorder___TrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SMart_Attendance_Recorder___TrackerUITests.swift"; sourceTree = "<group>"; };
 		1F89DB7A1F86ABD2009E5C3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9E296B461F86C03500B29AD7 /* Tab3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab3ViewController.swift; sourceTree = "<group>"; };
-		9E296B481F86C04F00B29AD7 /* Tab4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab4ViewController.swift; sourceTree = "<group>"; };
+		9E296B461F86C03500B29AD7 /* AttendanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceViewController.swift; sourceTree = "<group>"; };
+		9E296B481F86C04F00B29AD7 /* StudentProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +107,8 @@
 				1F89DB581F86ABD2009E5C3F /* LoginPageViewController.swift */,
 				1F89DB5A1F86ABD2009E5C3F /* SecondViewController.swift */,
 				1F89DB5C1F86ABD2009E5C3F /* Main.storyboard */,
-				9E296B461F86C03500B29AD7 /* Tab3ViewController.swift */,
-				9E296B481F86C04F00B29AD7 /* Tab4ViewController.swift */,
+				9E296B461F86C03500B29AD7 /* AttendanceViewController.swift */,
+				9E296B481F86C04F00B29AD7 /* StudentProfileViewController.swift */,
 				1F89DB5F1F86ABD2009E5C3F /* Assets.xcassets */,
 				1F89DB611F86ABD2009E5C3F /* LaunchScreen.storyboard */,
 				1F89DB641F86ABD2009E5C3F /* Info.plist */,
@@ -268,9 +268,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E296B471F86C03500B29AD7 /* Tab3ViewController.swift in Sources */,
+				9E296B471F86C03500B29AD7 /* AttendanceViewController.swift in Sources */,
 				1F89DB5B1F86ABD2009E5C3F /* SecondViewController.swift in Sources */,
-				9E296B491F86C04F00B29AD7 /* Tab4ViewController.swift in Sources */,
+				9E296B491F86C04F00B29AD7 /* StudentProfileViewController.swift in Sources */,
 				1F89DB571F86ABD2009E5C3F /* AppDelegate.swift in Sources */,
 				1F89DB591F86ABD2009E5C3F /* LoginPageViewController.swift in Sources */,
 			);

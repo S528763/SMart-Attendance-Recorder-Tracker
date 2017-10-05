@@ -1,5 +1,5 @@
 //
-//  Tab3ViewController.swift
+//  AttendanceViewController.swift
 //  SMart Attendance Recorder & Tracker
 //
 //  Created by Moody,Christopher L on 10/5/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Tab3ViewController: UIViewController {
+class AttendanceViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
