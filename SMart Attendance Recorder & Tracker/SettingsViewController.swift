@@ -9,11 +9,26 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
+    
+    static var info: [String] = ["Teacher John", "johnTeacher@email.com", "+1 (888) 123 4567"]
+
+    @IBOutlet weak var nameLBL: UILabel!
+    @IBOutlet weak var emailLBL: UILabel!
+    @IBOutlet weak var phoneNumberLBL: UILabel!
+    
+    
+    
+    @IBAction func deleteSheetBTTN(_ sender: Any) {
+        
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        refreshData()
         // Do any additional setup after loading the view.
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,6 +36,11 @@ class SettingsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func refreshData(){
+        nameLBL.text = SettingsViewController.info[0]
+        emailLBL.text = SettingsViewController.info[1]
+        phoneNumberLBL.text = SettingsViewController.info[2]
+    }
 
     /*
     // MARK: - Navigation
