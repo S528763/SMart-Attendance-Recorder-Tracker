@@ -18,6 +18,8 @@
 		1F89DB8B1F86CB1E009E5C3F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F89DB8A1F86CB1E009E5C3F /* SettingsViewController.swift */; };
 		9E296B471F86C03500B29AD7 /* AttendanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E296B461F86C03500B29AD7 /* AttendanceViewController.swift */; };
 		9E296B491F86C04F00B29AD7 /* StudentProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E296B481F86C04F00B29AD7 /* StudentProfileViewController.swift */; };
+		CC2B1B1B1F99721D0059522B /* popUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2B1B1A1F99721D0059522B /* popUpViewController.swift */; };
+		CC2B1B1D1F9972BF0059522B /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2B1B1C1F9972BF0059522B /* ForgotPasswordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		1F89DB8A1F86CB1E009E5C3F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		9E296B461F86C03500B29AD7 /* AttendanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceViewController.swift; sourceTree = "<group>"; };
 		9E296B481F86C04F00B29AD7 /* StudentProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProfileViewController.swift; sourceTree = "<group>"; };
+		CC2B1B1A1F99721D0059522B /* popUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = popUpViewController.swift; sourceTree = "<group>"; };
+		CC2B1B1C1F9972BF0059522B /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,8 @@
 				9E296B481F86C04F00B29AD7 /* StudentProfileViewController.swift */,
 				1F89DB8A1F86CB1E009E5C3F /* SettingsViewController.swift */,
 				1F89DB5C1F86ABD2009E5C3F /* Main.storyboard */,
+				CC2B1B1C1F9972BF0059522B /* ForgotPasswordViewController.swift */,
+				CC2B1B1A1F99721D0059522B /* popUpViewController.swift */,
 				1F89DB5F1F86ABD2009E5C3F /* Assets.xcassets */,
 				1F89DB611F86ABD2009E5C3F /* LaunchScreen.storyboard */,
 				1F89DB641F86ABD2009E5C3F /* Info.plist */,
@@ -271,8 +277,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC2B1B1D1F9972BF0059522B /* ForgotPasswordViewController.swift in Sources */,
 				9E296B471F86C03500B29AD7 /* AttendanceViewController.swift in Sources */,
 				9E296B491F86C04F00B29AD7 /* StudentProfileViewController.swift in Sources */,
+				CC2B1B1B1F99721D0059522B /* popUpViewController.swift in Sources */,
 				1F89DB571F86ABD2009E5C3F /* AppDelegate.swift in Sources */,
 				1F89DB891F86CA2C009E5C3F /* HomePageViewController.swift in Sources */,
 				1F89DB591F86ABD2009E5C3F /* LoginPageViewController.swift in Sources */,
