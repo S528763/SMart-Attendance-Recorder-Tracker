@@ -1,34 +1,19 @@
 //
-//  SettingsViewController.swift
+//  popUpViewController.swift
 //  SMart Attendance Recorder & Tracker
 //
-//  Created by Srimat Tirumala Pallerlamudi,Aditya on 10/5/17.
+//  Created by Laddipeerla,Karthik on 10/19/17.
 //  Copyright © 2017 Aditya Srimat Tirumala Pallerlamudi. All rights reserved.
 //
 
 import UIKit
 
-class SettingsViewController: UIViewController {
-    
-    static var info: [String] = ["Teacher John", "johnTeacher@email.com", "+1 (888) 123 4567"]
-
-    @IBOutlet weak var nameLBL: UILabel!
-    @IBOutlet weak var emailLBL: UILabel!
-    @IBOutlet weak var phoneNumberLBL: UILabel!
-    
-    
-    
-    @IBAction func deleteSheetBTTN(_ sender: Any) {
-        
-    }
-    
+class popUpViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        refreshData()
+        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
         // Do any additional setup after loading the view.
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,12 +21,10 @@ class SettingsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func refreshData(){
-        nameLBL.text = SettingsViewController.info[0]
-        emailLBL.text = SettingsViewController.info[1]
-        phoneNumberLBL.text = SettingsViewController.info[2]
+    @IBAction func okPopup(_ sender: Any) {
+        self.view.removeFromSuperview()
     }
-
+    
     /*
     // MARK: - Navigation
 
