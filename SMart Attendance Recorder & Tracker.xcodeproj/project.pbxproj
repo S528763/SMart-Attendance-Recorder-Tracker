@@ -284,6 +284,7 @@
 				1F89DB571F86ABD2009E5C3F /* AppDelegate.swift in Sources */,
 				1F89DB891F86CA2C009E5C3F /* HomePageViewController.swift in Sources */,
 				1F89DB591F86ABD2009E5C3F /* LoginPageViewController.swift in Sources */,
+				9E70C0DB1F996995006AA621 /* EditSettingsViewController.swift in Sources */,
 				1F89DB8B1F86CB1E009E5C3F /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
