@@ -60,7 +60,7 @@
                                 </constraints>
                                 <state key="normal" title="Sign In"/>
                                 <connections>
-                                    <segue destination="8rJ-Kc-sve" kind="show" id="lRH-f6-zAX"/>
+                                    <segue destination="8rJ-Kc-sve" kind="show" id="01Y-cE-6ob"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlM-Q8-ToJ">
@@ -683,6 +683,9 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="49" id="yxQ-QW-Woz"/>
                                 </constraints>
                                 <state key="normal" title="Submit"/>
+                                <connections>
+                                    <segue destination="9pv-A4-QxB" kind="show" id="d8x-3l-PEB"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3I6-qg-owX">
                                 <rect key="frame" x="114.5" y="52" width="146" height="22"/>
@@ -861,8 +864,8 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="U8O-Xu-slA"/>
-        <segue reference="lRH-f6-zAX"/>
+        <segue reference="GRr-BS-izD"/>
+        <segue reference="01Y-cE-6ob"/>
         <segue reference="u7Y-xg-7CH"/>
     </inferredMetricsTieBreakers>
 </document>
