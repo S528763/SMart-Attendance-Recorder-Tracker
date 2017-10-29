@@ -10,6 +10,7 @@ import UIKit
 
 class RegisterNewAccountViewController: UIViewController {
 
+    //outlets
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var usernameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!

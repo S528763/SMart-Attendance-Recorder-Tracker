@@ -12,6 +12,7 @@ class EditSettingsViewController: UIViewController {
     
     var info: [String] = SettingsViewController.info
     
+    //outlets
     @IBOutlet weak var nameTF: UITextField!
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var phoneNumberTF: UITextField!
