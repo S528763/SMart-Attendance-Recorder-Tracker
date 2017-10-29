@@ -13,6 +13,11 @@ class HomePageViewController: UIViewController, UIPickerViewDataSource, UIPicker
     @IBOutlet weak var pickerTF : UITextField!
     
     let options = ["", "A", "B", "C"]
+    @IBOutlet weak var profTF: UITextField!
+    @IBOutlet weak var courseTF: UITextField!
+    @IBOutlet weak var classTimTF: UITextField!
+    
+    static var classData: [String:String] = ["Professor":"MP Rogers", "Course":"iOS", "Class Timings":"12:00 PM - 12:50 PM"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +27,7 @@ class HomePageViewController: UIViewController, UIPickerViewDataSource, UIPicker
         
         pickerTF.inputView = pickerView
         
-//        self.tabBarController?.tabBar.isHidden = false
+        //        self.tabBarController?.tabBar.isHidden = false
         // Do any additional setup after loading the view.
     }
     
@@ -59,3 +64,4 @@ class HomePageViewController: UIViewController, UIPickerViewDataSource, UIPicker
      */
     
 }
+

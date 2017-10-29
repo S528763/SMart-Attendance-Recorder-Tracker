@@ -11,18 +11,18 @@ import UIKit
 class SettingsViewController: UIViewController {
     
     static var info: [String] = ["Teacher John", "johnTeacher@email.com", "+1 (888) 123 4567"]
-
+    
     @IBOutlet weak var nameLBL: UILabel!
     @IBOutlet weak var emailLBL: UILabel!
     @IBOutlet weak var phoneNumberLBL: UILabel!
     
     
     
-    @IBAction func deleteSheetBTTN(_ sender: Any) {
+    @IBAction func deleteSheetBTN(_ sender: Any) {
         
     }
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,7 +30,7 @@ class SettingsViewController: UIViewController {
         // Do any additional setup after loading the view.
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -41,15 +41,15 @@ class SettingsViewController: UIViewController {
         emailLBL.text = SettingsViewController.info[1]
         phoneNumberLBL.text = SettingsViewController.info[2]
     }
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
