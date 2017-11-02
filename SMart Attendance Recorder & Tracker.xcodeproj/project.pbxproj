@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C085FE2656416F7A976FC43 /* libPods-SMart Attendance Recorder & Tracker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59565B11212A2B6ABF29E895 /* libPods-SMart Attendance Recorder & Tracker.a */; };
 		1F89DB571F86ABD2009E5C3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F89DB561F86ABD2009E5C3F /* AppDelegate.swift */; };
 		1F89DB591F86ABD2009E5C3F /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F89DB581F86ABD2009E5C3F /* LoginPageViewController.swift */; };
 		1F89DB601F86ABD2009E5C3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F89DB5F1F86ABD2009E5C3F /* Assets.xcassets */; };
@@ -48,19 +49,22 @@
 		1F89DB621F86ABD2009E5C3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F89DB641F86ABD2009E5C3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F89DB691F86ABD2009E5C3F /* SMart Attendance Recorder & TrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SMart Attendance Recorder & TrackerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1F89DB6D1F86ABD2009E5C3F /* SMart_Attendance_Recorder___TrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SMart_Attendance_Recorder___TrackerTests.swift"; sourceTree = "<group>"; };
+		1F89DB6D1F86ABD2009E5C3F /* SMart_Attendance_Recorder___TrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMart_Attendance_Recorder___TrackerTests.swift; sourceTree = "<group>"; };
 		1F89DB6F1F86ABD2009E5C3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F89DB741F86ABD2009E5C3F /* SMart Attendance Recorder & TrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SMart Attendance Recorder & TrackerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1F89DB781F86ABD2009E5C3F /* SMart_Attendance_Recorder___TrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SMart_Attendance_Recorder___TrackerUITests.swift"; sourceTree = "<group>"; };
+		1F89DB781F86ABD2009E5C3F /* SMart_Attendance_Recorder___TrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMart_Attendance_Recorder___TrackerUITests.swift; sourceTree = "<group>"; };
 		1F89DB7A1F86ABD2009E5C3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F89DB881F86CA2C009E5C3F /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		1F89DB8A1F86CB1E009E5C3F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		587D5DEE33DE9F1209584219 /* Pods-SMart Attendance Recorder & Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMart Attendance Recorder & Tracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SMart Attendance Recorder & Tracker/Pods-SMart Attendance Recorder & Tracker.debug.xcconfig"; sourceTree = "<group>"; };
+		59565B11212A2B6ABF29E895 /* libPods-SMart Attendance Recorder & Tracker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SMart Attendance Recorder & Tracker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		68523DE21FA55B9F00E8CF74 /* EditSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditSettingsViewController.swift; sourceTree = "<group>"; };
 		68523DE31FA55B9F00E8CF74 /* RegisterNewAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterNewAccountViewController.swift; sourceTree = "<group>"; };
 		68523DE71FA55BC000E8CF74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9E296B461F86C03500B29AD7 /* AttendanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceViewController.swift; sourceTree = "<group>"; };
 		9E296B481F86C04F00B29AD7 /* StudentProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProfileViewController.swift; sourceTree = "<group>"; };
 		CC2B1B1C1F9972BF0059522B /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		FEA561EDFD1A37925E593AB9 /* Pods-SMart Attendance Recorder & Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMart Attendance Recorder & Tracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-SMart Attendance Recorder & Tracker/Pods-SMart Attendance Recorder & Tracker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C085FE2656416F7A976FC43 /* libPods-SMart Attendance Recorder & Tracker.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +100,8 @@
 				1F89DB6C1F86ABD2009E5C3F /* SMart Attendance Recorder & TrackerTests */,
 				1F89DB771F86ABD2009E5C3F /* SMart Attendance Recorder & TrackerUITests */,
 				1F89DB541F86ABD2009E5C3F /* Products */,
+				EEF70E1DAF287C34032BD2B6 /* Pods */,
+				3E2D0853092EC535CB1355E1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,6 +153,23 @@
 			path = "SMart Attendance Recorder & TrackerUITests";
 			sourceTree = "<group>";
 		};
+		3E2D0853092EC535CB1355E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				59565B11212A2B6ABF29E895 /* libPods-SMart Attendance Recorder & Tracker.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EEF70E1DAF287C34032BD2B6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				587D5DEE33DE9F1209584219 /* Pods-SMart Attendance Recorder & Tracker.debug.xcconfig */,
+				FEA561EDFD1A37925E593AB9 /* Pods-SMart Attendance Recorder & Tracker.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -153,9 +177,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F89DB7D1F86ABD2009E5C3F /* Build configuration list for PBXNativeTarget "SMart Attendance Recorder & Tracker" */;
 			buildPhases = (
+				BF899D1287873860E925D206 /* [CP] Check Pods Manifest.lock */,
 				1F89DB4F1F86ABD2009E5C3F /* Sources */,
 				1F89DB501F86ABD2009E5C3F /* Frameworks */,
 				1F89DB511F86ABD2009E5C3F /* Resources */,
+				D51CC74A6A2776E6599A8788 /* [CP] Embed Pods Frameworks */,
+				0EAE2D759CCBED82F9CC7CE0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -274,6 +301,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0EAE2D759CCBED82F9CC7CE0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SMart Attendance Recorder & Tracker/Pods-SMart Attendance Recorder & Tracker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF899D1287873860E925D206 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SMart Attendance Recorder & Tracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D51CC74A6A2776E6599A8788 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SMart Attendance Recorder & Tracker/Pods-SMart Attendance Recorder & Tracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1F89DB4F1F86ABD2009E5C3F /* Sources */ = {
@@ -452,6 +530,7 @@
 		};
 		1F89DB7E1F86ABD2009E5C3F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 587D5DEE33DE9F1209584219 /* Pods-SMart Attendance Recorder & Tracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -466,6 +545,7 @@
 		};
 		1F89DB7F1F86ABD2009E5C3F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEA561EDFD1A37925E593AB9 /* Pods-SMart Attendance Recorder & Tracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
