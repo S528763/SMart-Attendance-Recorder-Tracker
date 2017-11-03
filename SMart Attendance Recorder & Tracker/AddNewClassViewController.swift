@@ -22,12 +22,7 @@ class AddNewClassViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let pickerView = UIPickerView()
-        pickerView.delegate = self
-        
-        //pickerTF.inputView = pickerView
-        
-        //        self.tabBarController?.tabBar.isHidden = false
+        // self.tabBarController?.tabBar.isHidden = false
         // Do any additional setup after loading the view.
     }
     
