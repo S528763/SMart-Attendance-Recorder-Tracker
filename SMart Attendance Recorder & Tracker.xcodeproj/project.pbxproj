@@ -8,18 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		0C085FE2656416F7A976FC43 /* libPods-SMart Attendance Recorder & Tracker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59565B11212A2B6ABF29E895 /* libPods-SMart Attendance Recorder & Tracker.a */; };
+		1F5157401FABFDE20077CEA1 /* AddNewClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F51573F1FABFDE10077CEA1 /* AddNewClassViewController.swift */; };
+		1F5157421FABFF900077CEA1 /* ClassesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5157411FABFF900077CEA1 /* ClassesTableViewController.swift */; };
+		1F5157441FAC008B0077CEA1 /* TakeAttendanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5157431FAC008B0077CEA1 /* TakeAttendanceViewController.swift */; };
+		1F5157461FAC00D80077CEA1 /* AttendanceSheetsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5157451FAC00D80077CEA1 /* AttendanceSheetsTableViewController.swift */; };
+		1F5157481FAC11CE0077CEA1 /* Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5157471FAC11CE0077CEA1 /* Classes.swift */; };
 		1F89DB571F86ABD2009E5C3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F89DB561F86ABD2009E5C3F /* AppDelegate.swift */; };
 		1F89DB591F86ABD2009E5C3F /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F89DB581F86ABD2009E5C3F /* LoginPageViewController.swift */; };
 		1F89DB601F86ABD2009E5C3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F89DB5F1F86ABD2009E5C3F /* Assets.xcassets */; };
 		1F89DB631F86ABD2009E5C3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F89DB611F86ABD2009E5C3F /* LaunchScreen.storyboard */; };
 		1F89DB6E1F86ABD2009E5C3F /* SMart_Attendance_Recorder___TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F89DB6D1F86ABD2009E5C3F /* SMart_Attendance_Recorder___TrackerTests.swift */; };
 		1F89DB791F86ABD2009E5C3F /* SMart_Attendance_Recorder___TrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F89DB781F86ABD2009E5C3F /* SMart_Attendance_Recorder___TrackerUITests.swift */; };
-		1F89DB891F86CA2C009E5C3F /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F89DB881F86CA2C009E5C3F /* HomePageViewController.swift */; };
 		1F89DB8B1F86CB1E009E5C3F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F89DB8A1F86CB1E009E5C3F /* SettingsViewController.swift */; };
 		68523DE41FA55B9F00E8CF74 /* EditSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68523DE21FA55B9F00E8CF74 /* EditSettingsViewController.swift */; };
 		68523DE51FA55B9F00E8CF74 /* RegisterNewAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68523DE31FA55B9F00E8CF74 /* RegisterNewAccountViewController.swift */; };
 		68523DE81FA55BC100E8CF74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68523DE61FA55BC000E8CF74 /* Main.storyboard */; };
-		9E296B471F86C03500B29AD7 /* AttendanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E296B461F86C03500B29AD7 /* AttendanceViewController.swift */; };
 		9E296B491F86C04F00B29AD7 /* StudentProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E296B481F86C04F00B29AD7 /* StudentProfileViewController.swift */; };
 		CC2B1B1D1F9972BF0059522B /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2B1B1C1F9972BF0059522B /* ForgotPasswordViewController.swift */; };
 /* End PBXBuildFile section */
@@ -42,6 +45,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F51573F1FABFDE10077CEA1 /* AddNewClassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewClassViewController.swift; sourceTree = "<group>"; };
+		1F5157411FABFF900077CEA1 /* ClassesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesTableViewController.swift; sourceTree = "<group>"; };
+		1F5157431FAC008B0077CEA1 /* TakeAttendanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeAttendanceViewController.swift; sourceTree = "<group>"; };
+		1F5157451FAC00D80077CEA1 /* AttendanceSheetsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceSheetsTableViewController.swift; sourceTree = "<group>"; };
+		1F5157471FAC11CE0077CEA1 /* Classes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classes.swift; sourceTree = "<group>"; };
 		1F89DB531F86ABD2009E5C3F /* SMart Attendance Recorder & Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SMart Attendance Recorder & Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F89DB561F86ABD2009E5C3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F89DB581F86ABD2009E5C3F /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
@@ -54,14 +62,12 @@
 		1F89DB741F86ABD2009E5C3F /* SMart Attendance Recorder & TrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SMart Attendance Recorder & TrackerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F89DB781F86ABD2009E5C3F /* SMart_Attendance_Recorder___TrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SMart_Attendance_Recorder___TrackerUITests.swift"; sourceTree = "<group>"; };
 		1F89DB7A1F86ABD2009E5C3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1F89DB881F86CA2C009E5C3F /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		1F89DB8A1F86CB1E009E5C3F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		587D5DEE33DE9F1209584219 /* Pods-SMart Attendance Recorder & Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMart Attendance Recorder & Tracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SMart Attendance Recorder & Tracker/Pods-SMart Attendance Recorder & Tracker.debug.xcconfig"; sourceTree = "<group>"; };
 		59565B11212A2B6ABF29E895 /* libPods-SMart Attendance Recorder & Tracker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SMart Attendance Recorder & Tracker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		68523DE21FA55B9F00E8CF74 /* EditSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditSettingsViewController.swift; sourceTree = "<group>"; };
 		68523DE31FA55B9F00E8CF74 /* RegisterNewAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterNewAccountViewController.swift; sourceTree = "<group>"; };
 		68523DE71FA55BC000E8CF74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9E296B461F86C03500B29AD7 /* AttendanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceViewController.swift; sourceTree = "<group>"; };
 		9E296B481F86C04F00B29AD7 /* StudentProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProfileViewController.swift; sourceTree = "<group>"; };
 		CC2B1B1C1F9972BF0059522B /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		FEA561EDFD1A37925E593AB9 /* Pods-SMart Attendance Recorder & Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMart Attendance Recorder & Tracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-SMart Attendance Recorder & Tracker/Pods-SMart Attendance Recorder & Tracker.release.xcconfig"; sourceTree = "<group>"; };
@@ -120,14 +126,17 @@
 			children = (
 				1F89DB561F86ABD2009E5C3F /* AppDelegate.swift */,
 				1F89DB581F86ABD2009E5C3F /* LoginPageViewController.swift */,
-				1F89DB881F86CA2C009E5C3F /* HomePageViewController.swift */,
-				9E296B461F86C03500B29AD7 /* AttendanceViewController.swift */,
+				1F5157411FABFF900077CEA1 /* ClassesTableViewController.swift */,
+				1F51573F1FABFDE10077CEA1 /* AddNewClassViewController.swift */,
+				1F5157431FAC008B0077CEA1 /* TakeAttendanceViewController.swift */,
+				1F5157451FAC00D80077CEA1 /* AttendanceSheetsTableViewController.swift */,
 				9E296B481F86C04F00B29AD7 /* StudentProfileViewController.swift */,
 				1F89DB8A1F86CB1E009E5C3F /* SettingsViewController.swift */,
 				68523DE61FA55BC000E8CF74 /* Main.storyboard */,
 				68523DE21FA55B9F00E8CF74 /* EditSettingsViewController.swift */,
 				68523DE31FA55B9F00E8CF74 /* RegisterNewAccountViewController.swift */,
 				CC2B1B1C1F9972BF0059522B /* ForgotPasswordViewController.swift */,
+				1F5157471FAC11CE0077CEA1 /* Classes.swift */,
 				1F89DB5F1F86ABD2009E5C3F /* Assets.xcassets */,
 				1F89DB611F86ABD2009E5C3F /* LaunchScreen.storyboard */,
 				1F89DB641F86ABD2009E5C3F /* Info.plist */,
@@ -358,14 +367,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F5157421FABFF900077CEA1 /* ClassesTableViewController.swift in Sources */,
 				CC2B1B1D1F9972BF0059522B /* ForgotPasswordViewController.swift in Sources */,
-				9E296B471F86C03500B29AD7 /* AttendanceViewController.swift in Sources */,
+				1F5157481FAC11CE0077CEA1 /* Classes.swift in Sources */,
+				1F5157441FAC008B0077CEA1 /* TakeAttendanceViewController.swift in Sources */,
 				68523DE51FA55B9F00E8CF74 /* RegisterNewAccountViewController.swift in Sources */,
 				68523DE41FA55B9F00E8CF74 /* EditSettingsViewController.swift in Sources */,
+				1F5157461FAC00D80077CEA1 /* AttendanceSheetsTableViewController.swift in Sources */,
 				9E296B491F86C04F00B29AD7 /* StudentProfileViewController.swift in Sources */,
 				1F89DB571F86ABD2009E5C3F /* AppDelegate.swift in Sources */,
-				1F89DB891F86CA2C009E5C3F /* HomePageViewController.swift in Sources */,
 				1F89DB591F86ABD2009E5C3F /* LoginPageViewController.swift in Sources */,
+				1F5157401FABFDE20077CEA1 /* AddNewClassViewController.swift in Sources */,
 				1F89DB8B1F86CB1E009E5C3F /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

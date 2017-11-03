@@ -8,9 +8,9 @@
 
 import UIKit
 
-class AttendanceViewController: UIViewController {
+class TakeAttendanceViewController: UIViewController {
     
-    var classData = HomePageViewController.classData
+    var classData = AddNewClassViewController.classData
     
     @IBOutlet weak var courseLBL: UILabel!
     @IBOutlet weak var classTimLBL: UILabel!
