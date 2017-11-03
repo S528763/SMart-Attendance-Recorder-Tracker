@@ -10,7 +10,7 @@ import UIKit
 
 class AttendanceSheetsTableViewController: UITableViewController {
     
-    var classes:
+    var classes:Classes!
 
     override func viewDidLoad() {
         super.viewDidLoad()
