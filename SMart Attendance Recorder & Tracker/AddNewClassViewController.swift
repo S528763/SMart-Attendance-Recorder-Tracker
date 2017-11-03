@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomePageViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class AddNewClassViewController: UIViewController {
     
     @IBOutlet weak var pickerTF : UITextField!
     
@@ -36,21 +36,21 @@ class HomePageViewController: UIViewController, UIPickerViewDataSource, UIPicker
         // Dispose of any resources that can be recreated.
     }
     
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return options.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return options[row]
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        pickerTF.text = options[row]
-    }
+//    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+//        return 1
+//    }
+//
+//    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+//        return options.count
+//    }
+//
+//    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+//        return options[row]
+//    }
+//
+//    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+//        pickerTF.text = options[row]
+//    }
     
     
     /*
@@ -62,6 +62,11 @@ class HomePageViewController: UIViewController, UIPickerViewDataSource, UIPicker
      // Pass the selected object to the new view controller.
      }
      */
+    
+    @IBAction func addNewClass(_ sender: Any) {
+        // add new class
+        dismiss(animated: true, completion: nil)
+    }
     
 }
 
