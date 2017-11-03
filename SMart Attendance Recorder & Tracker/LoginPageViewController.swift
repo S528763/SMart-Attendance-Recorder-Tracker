@@ -10,18 +10,14 @@ import UIKit
 
 class LoginPageViewController: UIViewController {
     
-    @IBOutlet weak var signInBTN: UIButton!
     
-//    @IBAction func signIn(_ sender: Any) {
-//        let  navController = self.tabBarController?.viewControllers![1] as! UINavigationController
-//        ///secondviewcontroller in your case is cart
-//        let secondViewController = navController.viewControllers[0] as! HomePageViewController
-//        //set values you want to pass
-//        //lets say I want to pass name to secondVC
-//        secondViewController.title = "ABCD"
-//        
-//        self.tabBarController?.selectedIndex = 1
-//    }
+    @IBOutlet weak var usernameTF: UITextField!
+    @IBOutlet weak var passwordTF: UITextField!
+    @IBAction func signInBTTN(_ sender: Any) {
+        login( usernameTF.text!, passwordTF.text!)
+    }
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +31,15 @@ class LoginPageViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
+    func login(_ username:String, _ password:String) -> Void{
+        // Make sure that the username and password exist in the database
+        // If they exist, login to the user's account
+            // If logged in, then segue to main page
+        // If it doesn't exist produce a popup error that their account doesn't exist.
+            // If not logged in, then stay on page
+    }
+    func dismissVC(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
 }
 

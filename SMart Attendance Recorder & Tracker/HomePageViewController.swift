@@ -25,7 +25,7 @@ class HomePageViewController: UIViewController, UIPickerViewDataSource, UIPicker
         let pickerView = UIPickerView()
         pickerView.delegate = self
         
-        pickerTF.inputView = pickerView
+        //pickerTF.inputView = pickerView
         
         //        self.tabBarController?.tabBar.isHidden = false
         // Do any additional setup after loading the view.

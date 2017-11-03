@@ -25,12 +25,22 @@ class ForgotPasswordViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
+    @IBAction func sendEmailBTTN(_ sender: Any) {
+        //send the person an email.... Somehow...
+        self.dismiss(animated: true)
+    }
+    
+    @IBAction func cancelBTTN(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
     }
     
+   
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
