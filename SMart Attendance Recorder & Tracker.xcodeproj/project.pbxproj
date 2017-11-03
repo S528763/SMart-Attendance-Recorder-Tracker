@@ -49,10 +49,10 @@
 		1F89DB621F86ABD2009E5C3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F89DB641F86ABD2009E5C3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F89DB691F86ABD2009E5C3F /* SMart Attendance Recorder & TrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SMart Attendance Recorder & TrackerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1F89DB6D1F86ABD2009E5C3F /* SMart_Attendance_Recorder___TrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMart_Attendance_Recorder___TrackerTests.swift; sourceTree = "<group>"; };
+		1F89DB6D1F86ABD2009E5C3F /* SMart_Attendance_Recorder___TrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SMart_Attendance_Recorder___TrackerTests.swift"; sourceTree = "<group>"; };
 		1F89DB6F1F86ABD2009E5C3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F89DB741F86ABD2009E5C3F /* SMart Attendance Recorder & TrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SMart Attendance Recorder & TrackerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1F89DB781F86ABD2009E5C3F /* SMart_Attendance_Recorder___TrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMart_Attendance_Recorder___TrackerUITests.swift; sourceTree = "<group>"; };
+		1F89DB781F86ABD2009E5C3F /* SMart_Attendance_Recorder___TrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SMart_Attendance_Recorder___TrackerUITests.swift"; sourceTree = "<group>"; };
 		1F89DB7A1F86ABD2009E5C3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F89DB881F86CA2C009E5C3F /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		1F89DB8A1F86CB1E009E5C3F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -538,6 +538,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.nwmissouri.SMart-Attendance-Recorder---Tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Pods/Backendless/SDK/ios/backendless/include/Backendless-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -553,6 +554,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.nwmissouri.SMart-Attendance-Recorder---Tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Pods/Backendless/SDK/ios/backendless/include/Backendless-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
