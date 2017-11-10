@@ -10,11 +10,12 @@ import UIKit
 
 class AttendanceSheetsTableViewController: UITableViewController {
     
-   // var classes:Classes!
+    var claSS:ClaSS!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationItem.title = classes.name
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

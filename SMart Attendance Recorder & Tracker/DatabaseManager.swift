@@ -23,6 +23,7 @@ class DatabaseManager {
     init(){
         backendless.hostURL = SERVER_URL
         backendless.initApp(APPLICATION_ID, apiKey: API_KEY)
-//        dataStoreClasses = backendless.data.of(County.ofClass())
-//        dataStoreBird = backendless.data.of(Bird.ofClass())
+        //        dataStoreClasses = backendless.data.of(County.ofClass())
+        //        dataStoreBird = backendless.data.of(Bird.ofClass())
+    }
 }

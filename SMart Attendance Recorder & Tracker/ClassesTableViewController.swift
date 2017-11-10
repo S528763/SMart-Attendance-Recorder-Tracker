@@ -13,11 +13,28 @@ class ClassesTableViewController: UIViewController, UITableViewDataSource, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationItem.title = "Classes"
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(newClassAdded(notification:)), name: NSNotification.Name(rawValue:"New Class Added"), object: nil)
+    }
+    
+    @objc func newClassAdded(notification:Notification){
+        refreshClasses()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        refreshClasses()
+    }
+    
+    // Refreshes the lit of classes
+    func refreshClasses(){
+        State.counties = databaseManager.retrieveAllCounties()
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -102,7 +119,7 @@ class ClassesTableViewController: UIViewController, UITableViewDataSource, UITab
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
-        if segue.identifier == "course_attsheets" {
+        if segue.identifier == "Attendance_Sheets_Table_View_Controller" {
             let attsheetsTVC = segue.destination as! AttendanceSheetsTableViewController
            // attsheetsTVC.county = State.counties[(tableView.indexPathForSelectedRow?.row)!]
         }
