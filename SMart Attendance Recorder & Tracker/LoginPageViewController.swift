@@ -41,5 +41,8 @@ class LoginPageViewController: UIViewController {
     func dismissVC(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    @IBAction func cancel(unwindSegue: UIStoryboardSegue){
+        
+    }
 }
 

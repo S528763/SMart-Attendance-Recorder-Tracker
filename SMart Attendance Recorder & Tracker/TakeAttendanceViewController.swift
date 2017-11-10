@@ -37,6 +37,10 @@ class TakeAttendanceViewController: UIViewController {
         //calculating mean of class attendance
         return 90 //just for time being
     }
+    
+    @IBAction func attendanceDone(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     /*
      // MARK: - Navigation
      

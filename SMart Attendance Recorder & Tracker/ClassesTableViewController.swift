@@ -62,7 +62,9 @@ class ClassesTableViewController: UIViewController, UITableViewDataSource, UITab
 
         return cell
     }
-    
+    @IBAction func cancel(unwindSegue: UIStoryboardSegue){
+        
+    }
 
     /*
     // Override to support conditional editing of the table view.

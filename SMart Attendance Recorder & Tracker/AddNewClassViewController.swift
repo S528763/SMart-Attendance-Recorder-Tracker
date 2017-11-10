@@ -30,6 +30,10 @@ class AddNewClassViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    @IBAction func createClass(_ sender: Any){
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     
 //    func numberOfComponents(in pickerView: UIPickerView) -> Int {
 //        return 1
