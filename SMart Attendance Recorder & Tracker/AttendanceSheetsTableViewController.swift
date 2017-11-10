@@ -15,7 +15,7 @@ class AttendanceSheetsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationItem.title = classes.name
+        self.navigationItem.title = claSS.name
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
