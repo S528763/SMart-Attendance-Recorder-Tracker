@@ -14,9 +14,9 @@ class ClaSS : NSObject {
     var name:String?
     var created:NSDate?
     var updated:NSDate?
-    var sheets: [Sheets]? = []
-//    
-//    init(name:String, sheets:[Sheets]){
+    var sheets: [Sheet]? = []
+    
+    init(name:String, sheets:[Sheet]){
         self.name = name
         self.sheets = sheets
     }

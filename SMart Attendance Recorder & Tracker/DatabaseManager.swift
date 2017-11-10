@@ -16,14 +16,13 @@ class DatabaseManager {
     let API_KEY = "AE53D760-B74B-A970-FFFE-EBFDD6988300"
     let SERVER_URL = "https://api.backendless.com"
     let backendless = Backendless.sharedInstance()!
-    var dataStoreClasses:IDataStore!
-    var dataStoreSheets:IDataStore!
-    
+    var dataStoreClass:IDataStore!
+    var dataStoreSheet:IDataStore!
     
     init(){
         backendless.hostURL = SERVER_URL
         backendless.initApp(APPLICATION_ID, apiKey: API_KEY)
-        //        dataStoreClasses = backendless.data.of(County.ofClass())
-        //        dataStoreBird = backendless.data.of(Bird.ofClass())
+        dataStoreClass = backendless.data.of(ClaSS.ofClass())
+        dataStoreSheet = backendless.data.of(Sheet.ofClass())
     }
 }

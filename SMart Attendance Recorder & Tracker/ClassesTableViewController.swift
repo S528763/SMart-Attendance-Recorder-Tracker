@@ -33,8 +33,8 @@ class ClassesTableViewController: UIViewController, UITableViewDataSource, UITab
     
     // Refreshes the lit of classes
     func refreshClasses(){
-        State.counties = databaseManager.retrieveAllCounties()
-        tableView.reloadData()
+       // Professor.classes = dbManager.retrieveAllClasses()
+       // tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,16 +51,15 @@ class ClassesTableViewController: UIViewController, UITableViewDataSource, UITab
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return Professor.classes.count
     }
 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "class_cell")
+        let claSS = Professor.classes[indexPath.row]
+        cell?.textLabel?.text = claSS.name
+        return cell!
     }
     
 
@@ -121,7 +120,7 @@ class ClassesTableViewController: UIViewController, UITableViewDataSource, UITab
         
         if segue.identifier == "Attendance_Sheets_Table_View_Controller" {
             let attsheetsTVC = segue.destination as! AttendanceSheetsTableViewController
-           // attsheetsTVC.county = State.counties[(tableView.indexPathForSelectedRow?.row)!]
+           // attsheetsTVC.claSS = Professor.classes[(tableView.indexPathForSelectedRow?.row)!]
         }
         
     }
