@@ -10,25 +10,29 @@ import UIKit
 
 class ForgotPasswordViewController: UIViewController {
     
+    @IBOutlet weak var emailIDTF: UITextField!
     
     @IBOutlet weak var submitBTN: UIButton!
-    
-    @IBAction func submit() {
-        alertForForgotPassword(submitBTN)
+    var dataBaseManagerInstance : DatabaseManager = DatabaseManager()
+//    @IBAction func submit() {
+//        alertForForgotPassword(submitBTN)
+//    }
+    @IBAction func resetPasswordBTN(_ sender: Any) {
+        dataBaseManagerInstance.forgotPassword(emailID: emailIDTF.text!)
     }
     
-    @IBAction func alertForForgotPassword(_ sender: UIButton) {
-        let alert = UIAlertController(title: "Reset done!", message: "Check email for credentials", preferredStyle: UIAlertControllerStyle.alert)
-        
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-        
-        self.present(alert, animated: true, completion: nil)
-    }
+//    @IBAction func alertForForgotPassword(_ sender: UIButton) {
+//        let alert = UIAlertController(title: "Reset done!", message: "Check email for credentials", preferredStyle: UIAlertControllerStyle.alert)
+//
+//        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+//
+//        self.present(alert, animated: true, completion: nil)
+//    }
     
-    @IBAction func sendEmailBTTN(_ sender: Any) {
-        //send the person an email.... Somehow...
-        self.dismiss(animated: true)
-    }
+//    @IBAction func sendEmailBTTN(_ sender: Any) {
+//        //send the person an email.... Somehow...
+//        self.dismiss(animated: true)
+//    }
     
     @IBAction func cancelBTTN(_ sender: Any) {
         self.dismiss(animated: true)

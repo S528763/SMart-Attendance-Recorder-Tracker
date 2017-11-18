@@ -25,4 +25,45 @@ class DatabaseManager {
         dataStoreClass = backendless.data.of(ClaSS.ofClass())
         dataStoreSheet = backendless.data.of(Sheet.ofClass())
     }
+    func registerUser(userEmail : String , userPassword : String) {
+        // creating backendless user object
+        let user = BackendlessUser()
+        user.setProperty("email", object: userEmail)
+        user.password = userPassword as NSString
+        self.backendless.userService.register(user,
+                                              response: {
+                                                (registeredUser : BackendlessUser?) -> Void in
+                                                print("User registered \(String(describing: registeredUser?.value(forKey: "email")))")
+        },
+                                              error: {
+                                                (fault : Fault?) -> Void in
+                                                print("Server reported an error: \(String(describing: fault?.description))")
+        })
+    }
+    func loginUser (userEmail : String , userPassword : String )  -> Bool{
+        var isLoggedIn : Bool = false
+        self.backendless.userService.login(userEmail,
+                                           password: userPassword,
+                                           response: {
+                                            (loggedUser : BackendlessUser?) -> Void in
+                                            isLoggedIn = true
+                                            print("Logged In Succesfull")
+        },
+                                           error: {
+                                            (fault : Fault?) -> Void in
+                                            isLoggedIn = false
+        })
+        return isLoggedIn
+    }
+    func forgotPassword(emailID : String){
+        self.backendless.userService.restorePassword(emailID,
+                                                     response: {
+                                                        (result : Any) -> Void in
+                                                        print("Please check your email inbox to reset your password")
+        },
+                                                     error: {
+                                                        (fault : Fault?) -> Void in
+                                                        print("Server reported an error: \(String(describing: fault?.description))")
+        })
+    }
 }
