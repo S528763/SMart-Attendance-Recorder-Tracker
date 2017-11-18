@@ -450,7 +450,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.78268290480000002" green="0.90212563450000005" blue="0.76741221989999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="rte-Ty-b5a" firstAttribute="leading" secondItem="cJY-Lo-Nnk" secondAttribute="leading" constant="16" id="20R-Vb-9gg"/>
                             <constraint firstItem="ugi-7Z-txA" firstAttribute="top" secondItem="ggj-R9-FCu" secondAttribute="bottom" constant="8" id="FeD-o1-gKa"/>
@@ -771,7 +771,7 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.80885444090000003" green="0.92790291879999998" blue="0.78623889739999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="hnF-cs-LHf" firstAttribute="centerY" secondItem="q5z-j0-sIO" secondAttribute="centerY" id="8W1-Rp-d0z"/>
                             <constraint firstItem="q5z-j0-sIO" firstAttribute="leading" secondItem="hnF-cs-LHf" secondAttribute="trailing" constant="8" id="8qP-Jy-OD0"/>
