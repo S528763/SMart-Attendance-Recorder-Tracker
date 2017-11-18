@@ -61,6 +61,7 @@ class ClassesTableViewController: UIViewController, UITableViewDelegate, UITable
         let cell = tableView.dequeueReusableCell(withIdentifier: "class_cell", for: indexPath)
         let claSS = Professor.classes[indexPath.row]
         cell.textLabel?.text = claSS.name
+        cell.detailTextLabel?.text = "12 - 12:50 PM"
         return cell
     }
     
