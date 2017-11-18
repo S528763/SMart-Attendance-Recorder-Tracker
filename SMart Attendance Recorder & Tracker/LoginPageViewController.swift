@@ -18,9 +18,7 @@ class LoginPageViewController: UIViewController {
 //    }
     @IBOutlet weak var emailIDTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
-    var databaseManagerInstance : DatabaseManager = DatabaseManager()
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.tabBarController?.tabBar.isHidden = true
@@ -33,7 +31,7 @@ class LoginPageViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     @IBAction func loginBTN(_ sender: Any) {
-        databaseManagerInstance.loginUser(userEmail: emailIDTF.text!, userPassword: passwordTF.text!)
+        dbManager.loginUser(userEmail: emailIDTF.text!, userPassword: passwordTF.text!)
     }
     
 //    func login(_ username:String, _ password:String) -> Void{

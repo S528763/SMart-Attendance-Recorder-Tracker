@@ -45,11 +45,10 @@ class RegisterNewAccountViewController: UIViewController {
     @IBOutlet weak var firstNameTF: UITextField!
     @IBOutlet weak var lastNameTF: UITextField!
 //    @IBOutlet weak var pickerView: UIPickerView!
-    var databaseManagerInstance : DatabaseManager = DatabaseManager()
     
     @IBAction func registerAccountBTTN(_ sender: Any) {
         //Create an instance of a new account with DATABASE MANAGER
-        databaseManagerInstance.registerUser(userEmail: emailIDTF.text!, userPassword: passwordTF.text!)
+        dbManager.registerUser(userEmail: emailIDTF.text!, userPassword: passwordTF.text!, firstName: firstNameTF.text!, lastName: lastNameTF.text!)
          self.dismiss(animated: true)
     }
 //    @IBAction func cancelRegisterBTTN(_ sender: Any) {

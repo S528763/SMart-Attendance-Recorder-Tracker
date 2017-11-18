@@ -13,12 +13,11 @@ class ForgotPasswordViewController: UIViewController {
     @IBOutlet weak var emailIDTF: UITextField!
     
 //    @IBOutlet weak var submitBTN: UIButton!
-    var dataBaseManagerInstance : DatabaseManager = DatabaseManager()
 //    @IBAction func submit() {
 //        alertForForgotPassword(submitBTN)
 //    }
     @IBAction func resetPasswordBTN(_ sender: Any) {
-        dataBaseManagerInstance.forgotPassword(emailID: emailIDTF.text!)
+        dbManager.forgotPassword(emailID: emailIDTF.text!)
     }
     
 //    @IBAction func alertForForgotPassword(_ sender: UIButton) {
