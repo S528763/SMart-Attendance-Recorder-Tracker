@@ -10,29 +10,33 @@ import UIKit
 
 class ForgotPasswordViewController: UIViewController {
     
+    @IBOutlet weak var emailIDTF: UITextField!
     
-    @IBOutlet weak var submitBTN: UIButton!
-    
-    @IBAction func submit() {
-        alertForForgotPassword(submitBTN)
+//    @IBOutlet weak var submitBTN: UIButton!
+    var dataBaseManagerInstance : DatabaseManager = DatabaseManager()
+//    @IBAction func submit() {
+//        alertForForgotPassword(submitBTN)
+//    }
+    @IBAction func resetPasswordBTN(_ sender: Any) {
+        dataBaseManagerInstance.forgotPassword(emailID: emailIDTF.text!)
     }
     
-    @IBAction func alertForForgotPassword(_ sender: UIButton) {
-        let alert = UIAlertController(title: "Reset done!", message: "Check email for credentials", preferredStyle: UIAlertControllerStyle.alert)
-        
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-        
-        self.present(alert, animated: true, completion: nil)
-    }
+//    @IBAction func alertForForgotPassword(_ sender: UIButton) {
+//        let alert = UIAlertController(title: "Reset done!", message: "Check email for credentials", preferredStyle: UIAlertControllerStyle.alert)
+//
+//        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+//
+//        self.present(alert, animated: true, completion: nil)
+//    }
     
-    @IBAction func sendEmailBTTN(_ sender: Any) {
-        //send the person an email.... Somehow...
-        self.dismiss(animated: true)
-    }
-    
-    @IBAction func cancelBTTN(_ sender: Any) {
-        self.dismiss(animated: true)
-    }
+//    @IBAction func sendEmailBTTN(_ sender: Any) {
+//        //send the person an email.... Somehow...
+//        self.dismiss(animated: true)
+//    }
+//
+//    @IBAction func cancelBTTN(_ sender: Any) {
+//        self.dismiss(animated: true)
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,10 +44,10 @@ class ForgotPasswordViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func forgotDone(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
+//    @IBAction func forgotDone(_ sender: Any) {
+//        self.dismiss(animated: true, completion: nil)
+//    }
+//    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

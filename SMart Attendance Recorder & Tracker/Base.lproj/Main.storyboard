@@ -120,6 +120,10 @@
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Login" image="first" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="emailIDTF" destination="mUO-to-Lg0" id="m8a-63-k8a"/>
+                        <outlet property="passwordTF" destination="bY4-xR-Tdq" id="jg5-du-87e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -536,12 +540,12 @@
                                     <navigationItem title="Register" id="mWB-EW-pBz">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="vZF-T5-2Jr">
                                             <connections>
-                                                <segue destination="1tK-ip-Quc" kind="unwind" unwindAction="cancelWithUnwindSegue:" id="6Uk-Gm-kuM"/>
+                                                <segue destination="1tK-ip-Quc" kind="unwind" unwindAction="cancelWithUnwindSegue:" id="sa9-Sh-V3D"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="n12-jl-Er7">
                                             <connections>
-                                                <action selector="registerDone:" destination="ycq-mO-PhA" id="RQ9-mw-VNM"/>
+                                                <action selector="registerAccountBTTN:" destination="ycq-mO-PhA" id="ygL-hL-A7o"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -585,10 +589,10 @@
                         <viewLayoutGuide key="safeArea" id="Fq7-et-hXI"/>
                     </view>
                     <connections>
-                        <outlet property="confirmPasswordTF" destination="lb5-Vv-YDs" id="7fn-r0-maU"/>
-                        <outlet property="emailTF" destination="4dY-bF-mPQ" id="W3W-W0-nVE"/>
-                        <outlet property="passwordTF" destination="1OB-Q9-8xs" id="ecW-Sr-kdG"/>
-                        <outlet property="usernameTF" destination="Uyj-eJ-XEb" id="63r-cy-JfI"/>
+                        <outlet property="emailIDTF" destination="1OB-Q9-8xs" id="r2j-I8-7Iw"/>
+                        <outlet property="firstNameTF" destination="4dY-bF-mPQ" id="6lg-XA-JJA"/>
+                        <outlet property="lastNameTF" destination="Uyj-eJ-XEb" id="qs6-rO-eB0"/>
+                        <outlet property="passwordTF" destination="lb5-Vv-YDs" id="6QL-WH-feH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NNX-LW-cp5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -909,7 +913,7 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Reset" id="fvm-hk-spy">
                                             <connections>
-                                                <action selector="forgotDone:" destination="XQ9-DX-TM2" id="EpU-D6-fFw"/>
+                                                <action selector="resetPasswordBTN:" destination="XQ9-DX-TM2" id="F9z-pG-3ZU"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -945,6 +949,9 @@
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="emailIDTF" destination="aYy-Av-r9f" id="Vmx-gQ-Qn3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gIb-mD-J0u" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="c2B-gu-sTl" userLabel="Exit" sceneMemberID="exit"/>
