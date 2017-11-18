@@ -25,11 +25,13 @@ class DatabaseManager {
         dataStoreClass = backendless.data.of(ClaSS.ofClass())
         dataStoreSheet = backendless.data.of(Sheet.ofClass())
     }
-    func registerUser(userEmail : String , userPassword : String) {
+    func registerUser(userEmail : String , userPassword : String, firstName : String, lastName : String) {
         // creating backendless user object
         let user = BackendlessUser()
         user.setProperty("email", object: userEmail)
         user.password = userPassword as NSString
+        user.setProperty("firstName", object: firstName)
+        user.setProperty("lastName", object: lastName)
         self.backendless.userService.register(user,
                                               response: {
                                                 (registeredUser : BackendlessUser?) -> Void in

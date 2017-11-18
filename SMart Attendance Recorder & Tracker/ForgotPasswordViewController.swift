@@ -12,7 +12,7 @@ class ForgotPasswordViewController: UIViewController {
     
     @IBOutlet weak var emailIDTF: UITextField!
     
-    @IBOutlet weak var submitBTN: UIButton!
+//    @IBOutlet weak var submitBTN: UIButton!
     var dataBaseManagerInstance : DatabaseManager = DatabaseManager()
 //    @IBAction func submit() {
 //        alertForForgotPassword(submitBTN)
@@ -33,10 +33,10 @@ class ForgotPasswordViewController: UIViewController {
 //        //send the person an email.... Somehow...
 //        self.dismiss(animated: true)
 //    }
-    
-    @IBAction func cancelBTTN(_ sender: Any) {
-        self.dismiss(animated: true)
-    }
+//
+//    @IBAction func cancelBTTN(_ sender: Any) {
+//        self.dismiss(animated: true)
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,10 +44,10 @@ class ForgotPasswordViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func forgotDone(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
+//    @IBAction func forgotDone(_ sender: Any) {
+//        self.dismiss(animated: true, completion: nil)
+//    }
+//    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -18,7 +18,7 @@ class LoginPageViewController: UIViewController {
 //    }
     @IBOutlet weak var emailIDTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
-    var databaseManagerInstance : DatabaseManger = DatabaseManger()
+    var databaseManagerInstance : DatabaseManager = DatabaseManager()
 
     
     override func viewDidLoad() {
@@ -32,6 +32,9 @@ class LoginPageViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    @IBAction func loginBTN(_ sender: Any) {
+        databaseManagerInstance.loginUser(userEmail: emailIDTF.text!, userPassword: passwordTF.text!)
+    }
     
 //    func login(_ username:String, _ password:String) -> Void{
 //        // Make sure that the username and password exist in the database
@@ -40,9 +43,9 @@ class LoginPageViewController: UIViewController {
 //        // If it doesn't exist produce a popup error that their account doesn't exist.
 //            // If not logged in, then stay on page
 //    }
-    func dismissVC(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
+//    func dismissVC(_ sender: Any) {
+//        dismiss(animated: true, completion: nil)
+//    }
     @IBAction func cancel(unwindSegue: UIStoryboardSegue){
         
     }
