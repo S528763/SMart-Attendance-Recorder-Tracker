@@ -10,10 +10,6 @@ import UIKit
 
 class AddNewClassViewController: UIViewController {
     
-    @IBOutlet weak var pickerTF : UITextField!
-    
-    let options = ["", "A", "B", "C"]
-    @IBOutlet weak var profTF: UITextField!
     @IBOutlet weak var courseTF: UITextField!
     @IBOutlet weak var classTimTF: UITextField!
     
@@ -29,9 +25,6 @@ class AddNewClassViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    @IBAction func createClass(_ sender: Any){
-        self.dismiss(animated: true, completion: nil)
     }
     
     
@@ -52,18 +45,23 @@ class AddNewClassViewController: UIViewController {
 //    }
     
     
-    /*
+    
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      // Get the new view controller using segue.destinationViewController.
      // Pass the selected object to the new view controller.
+        
+        
+        
+        
      }
-     */
+    
     
     @IBAction func addNewClass(_ sender: Any) {
         // add new class
+      //  dbManager.addNewClass(course: courseTF.text!, timing: classTimTF.text!)
         dismiss(animated: true, completion: nil)
     }
     

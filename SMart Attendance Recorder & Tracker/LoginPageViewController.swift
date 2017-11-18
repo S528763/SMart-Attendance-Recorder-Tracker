@@ -13,7 +13,7 @@ class LoginPageViewController: UIViewController {
     
     @IBOutlet weak var usernameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
-    @IBAction func signInBTTN(_ sender: Any) {
+    @IBAction func signInBTN(_ sender: Any) {
         login( usernameTF.text!, passwordTF.text!)
     }
     

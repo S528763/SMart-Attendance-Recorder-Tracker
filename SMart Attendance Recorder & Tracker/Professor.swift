@@ -9,5 +9,5 @@
 import Foundation
 
 class Professor {
-    static var classes:[ClaSS] = []
+    static var classes:[ClaSS] = [ClaSS(name: "iOS")]
 }
