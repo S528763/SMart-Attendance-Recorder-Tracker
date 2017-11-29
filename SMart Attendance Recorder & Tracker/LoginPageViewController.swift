@@ -18,7 +18,8 @@ class LoginPageViewController: UIViewController {
 //    }
     @IBOutlet weak var emailIDTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
-
+    @IBOutlet weak var signInBTN: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.tabBarController?.tabBar.isHidden = true
@@ -30,8 +31,18 @@ class LoginPageViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func loginBTN(_ sender: Any) {
-        dbManager.loginUser(userEmail: emailIDTF.text!, userPassword: passwordTF.text!)
+    @IBAction func signIn(_ sender: Any) {
+        if !dbManager.loginUser(userEmail: emailIDTF.text!, userPassword: passwordTF.text!) {
+            alertForInvalidSignIn(signInBTN)
+        }
+    }
+    
+    @IBAction func alertForInvalidSignIn(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Oops!", message: "You havn't entered a valid value, Please try again.", preferredStyle: UIAlertControllerStyle.alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
 //    func login(_ username:String, _ password:String) -> Void{
