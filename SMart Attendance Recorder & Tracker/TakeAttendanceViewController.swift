@@ -16,6 +16,12 @@ class TakeAttendanceViewController: UIViewController {
     @IBOutlet weak var classTimLBL: UILabel!
     @IBOutlet weak var classAttperLBL: UILabel!
     
+    @IBOutlet weak var studentLBL: UITableView!
+    
+    @IBOutlet weak var percLBL: UITableView!
+    
+    //@IBOutlet weak var presentAbsSWT: UISwitch!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadClassData()
@@ -28,9 +34,9 @@ class TakeAttendanceViewController: UIViewController {
     }
     
     func loadClassData() {
-        courseLBL.text = classData["Course"]
-        classTimLBL.text = classData["Class Timings"]
-        classAttperLBL.text = "\(classAttendance())%"
+        courseLBL.text! = classData["Course"]!
+        classTimLBL.text! = classData["Class Timings"]!
+        classAttperLBL.text! = "\(classAttendance())%"
     }
     
     func classAttendance() -> Double {

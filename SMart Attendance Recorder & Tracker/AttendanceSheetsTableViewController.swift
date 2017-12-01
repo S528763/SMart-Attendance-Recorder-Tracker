@@ -37,12 +37,12 @@ class AttendanceSheetsTableViewController: UIViewController, UITableViewDelegate
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return claSS.sheets!.count
+        return claSS.sheets.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "sheets_cell")
-        let sheet = claSS.sheets![indexPath.row]
+        let sheet = claSS.sheets[indexPath.row]
         cell?.textLabel?.text = sheet.name
         return cell!
     }
