@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TakeAttendanceViewController: UIViewController {
+class TakeAttendanceViewController: UITableViewController {
     
     var classData = AddNewClassViewController.classData
     
@@ -16,11 +16,16 @@ class TakeAttendanceViewController: UIViewController {
     @IBOutlet weak var classTimLBL: UILabel!
     @IBOutlet weak var classAttperLBL: UILabel!
     
-    @IBOutlet weak var studentLBL: UITableView!
+//    @IBOutlet weak var studentLBL: UILabel!
+//    
+//    @IBOutlet weak var percLBL: UILabel!
+//    
+//    @IBOutlet weak var presentAbsSWT: UISwitch!
     
-    @IBOutlet weak var percLBL: UITableView!
+    @IBAction func toggleValueChanged(_ sender: UISwitch) {
+        tableView.reloadData()
+    }
     
-    //@IBOutlet weak var presentAbsSWT: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +52,32 @@ class TakeAttendanceViewController: UIViewController {
     @IBAction func attendanceDone(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "newsheet_cell", for: indexPath)
+        
+        let studentLBL = cell.viewWithTag(100) as! UILabel
+        let percLBL = cell.viewWithTag(200) as! UILabel
+        let presentAbsSWT = cell.viewWithTag(300) as! UISwitch
+        
+        
+        studentLBL.text = "Aditya S T P"
+        percLBL.text = "99%"
+        presentAbsSWT.setOn(true, animated: true)
+//        
+//        let claSS = Professor.classes[indexPath.row]
+//        cell.textLabel?.text = "claSS.name"
+//        cell.detailTextLabel?.text = "12 - 12:50 PM"
+        return cell
+    }
+    
     /*
      // MARK: - Navigation
      
