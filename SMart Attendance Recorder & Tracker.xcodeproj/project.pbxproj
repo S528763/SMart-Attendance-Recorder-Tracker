@@ -28,6 +28,7 @@
 		68523DE51FA55B9F00E8CF74 /* RegisterNewAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68523DE31FA55B9F00E8CF74 /* RegisterNewAccountViewController.swift */; };
 		68523DE81FA55BC100E8CF74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68523DE61FA55BC000E8CF74 /* Main.storyboard */; };
 		9E296B491F86C04F00B29AD7 /* StudentProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E296B481F86C04F00B29AD7 /* StudentProfileViewController.swift */; };
+		9E9257131FD35BB100FC0433 /* StudentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9257121FD35BB100FC0433 /* StudentsViewController.swift */; };
 		CC2B1B1D1F9972BF0059522B /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2B1B1C1F9972BF0059522B /* ForgotPasswordViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,7 @@
 		68523DE31FA55B9F00E8CF74 /* RegisterNewAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterNewAccountViewController.swift; sourceTree = "<group>"; };
 		68523DE71FA55BC000E8CF74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9E296B481F86C04F00B29AD7 /* StudentProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProfileViewController.swift; sourceTree = "<group>"; };
+		9E9257121FD35BB100FC0433 /* StudentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsViewController.swift; sourceTree = "<group>"; };
 		CC2B1B1C1F9972BF0059522B /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		FEA561EDFD1A37925E593AB9 /* Pods-SMart Attendance Recorder & Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMart Attendance Recorder & Tracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-SMart Attendance Recorder & Tracker/Pods-SMart Attendance Recorder & Tracker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -145,6 +147,7 @@
 				68523DE31FA55B9F00E8CF74 /* RegisterNewAccountViewController.swift */,
 				CC2B1B1C1F9972BF0059522B /* ForgotPasswordViewController.swift */,
 				68523DE61FA55BC000E8CF74 /* Main.storyboard */,
+				9E9257121FD35BB100FC0433 /* StudentsViewController.swift */,
 				1FE73C951FB53A75005DF62E /* Professor.swift */,
 				1FE73C931FB53A3D005DF62E /* ClaSS.swift */,
 				1FE73C971FB53CF0005DF62E /* Sheet.swift */,
@@ -388,6 +391,7 @@
 				68523DE41FA55B9F00E8CF74 /* EditSettingsViewController.swift in Sources */,
 				1F5157461FAC00D80077CEA1 /* AttendanceSheetsTableViewController.swift in Sources */,
 				1FE73C961FB53A75005DF62E /* Professor.swift in Sources */,
+				9E9257131FD35BB100FC0433 /* StudentsViewController.swift in Sources */,
 				1FE73C941FB53A3D005DF62E /* ClaSS.swift in Sources */,
 				9E296B491F86C04F00B29AD7 /* StudentProfileViewController.swift in Sources */,
 				1F89DB571F86ABD2009E5C3F /* AppDelegate.swift in Sources */,
