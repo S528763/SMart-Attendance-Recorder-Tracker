@@ -18,8 +18,6 @@ class EditSettingsViewController: UIViewController {
     @IBOutlet weak var phoneNumberTF: UITextField!
     
     
-    
-
     @IBAction func cancelBTTN(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }

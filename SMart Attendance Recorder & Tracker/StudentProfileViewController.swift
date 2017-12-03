@@ -9,14 +9,25 @@
 import UIKit
 
 class StudentProfileViewController: UIViewController {
+    
+    var student:Student!
 
     @IBAction func cancel(_ sender: Any) {
         self.dismiss(animated: true)
     }
+    @IBOutlet weak var nameLBL: UILabel!
+    @IBOutlet weak var attendanceLBL: UILabel!
+    @IBOutlet weak var phoneLBL: UILabel!
+    @IBOutlet weak var emailLBL: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        nameLBL.text! = student.name
+        attendanceLBL.text! = "\(student.attendance)"
+        phoneLBL.text! = student.phone
+        emailLBL.text! = student.email
+        
     }
 
     override func didReceiveMemoryWarning() {
