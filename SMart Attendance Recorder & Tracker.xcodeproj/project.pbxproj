@@ -20,7 +20,7 @@
 		1F89DB6E1F86ABD2009E5C3F /* SMart_Attendance_Recorder___TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F89DB6D1F86ABD2009E5C3F /* SMart_Attendance_Recorder___TrackerTests.swift */; };
 		1F89DB791F86ABD2009E5C3F /* SMart_Attendance_Recorder___TrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F89DB781F86ABD2009E5C3F /* SMart_Attendance_Recorder___TrackerUITests.swift */; };
 		1F89DB8B1F86CB1E009E5C3F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F89DB8A1F86CB1E009E5C3F /* SettingsViewController.swift */; };
-		1FAFB1381FD32B4800195D9E /* SwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAFB1371FD32B4800195D9E /* SwitchCell.swift */; };
+		1FAE03CF1FD48C5200EA524C /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAE03CE1FD48C5200EA524C /* SwitchTableViewCell.swift */; };
 		1FE73C941FB53A3D005DF62E /* ClaSS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE73C931FB53A3D005DF62E /* ClaSS.swift */; };
 		1FE73C961FB53A75005DF62E /* Professor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE73C951FB53A75005DF62E /* Professor.swift */; };
 		1FE73C981FB53CF0005DF62E /* Sheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE73C971FB53CF0005DF62E /* Sheet.swift */; };
@@ -69,7 +69,7 @@
 		1F89DB781F86ABD2009E5C3F /* SMart_Attendance_Recorder___TrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SMart_Attendance_Recorder___TrackerUITests.swift"; sourceTree = "<group>"; };
 		1F89DB7A1F86ABD2009E5C3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F89DB8A1F86CB1E009E5C3F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		1FAFB1371FD32B4800195D9E /* SwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchCell.swift; sourceTree = "<group>"; };
+		1FAE03CE1FD48C5200EA524C /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
 		1FE73C931FB53A3D005DF62E /* ClaSS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClaSS.swift; sourceTree = "<group>"; };
 		1FE73C951FB53A75005DF62E /* Professor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Professor.swift; sourceTree = "<group>"; };
 		1FE73C971FB53CF0005DF62E /* Sheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sheet.swift; sourceTree = "<group>"; };
@@ -154,10 +154,10 @@
 				1FE73C931FB53A3D005DF62E /* ClaSS.swift */,
 				1FE73C971FB53CF0005DF62E /* Sheet.swift */,
 				1F6F58971FB51E47000D9ACF /* DatabaseManager.swift */,
+				1FAE03CE1FD48C5200EA524C /* SwitchTableViewCell.swift */,
 				1F89DB5F1F86ABD2009E5C3F /* Assets.xcassets */,
 				1F89DB611F86ABD2009E5C3F /* LaunchScreen.storyboard */,
 				1F89DB641F86ABD2009E5C3F /* Info.plist */,
-				1FAFB1371FD32B4800195D9E /* SwitchCell.swift */,
 			);
 			path = "SMart Attendance Recorder & Tracker";
 			sourceTree = "<group>";
@@ -390,6 +390,7 @@
 				CC2B1B1D1F9972BF0059522B /* ForgotPasswordViewController.swift in Sources */,
 				1F6F58981FB51E47000D9ACF /* DatabaseManager.swift in Sources */,
 				1F5157441FAC008B0077CEA1 /* TakeAttendanceViewController.swift in Sources */,
+				1FAE03CF1FD48C5200EA524C /* SwitchTableViewCell.swift in Sources */,
 				68523DE51FA55B9F00E8CF74 /* RegisterNewAccountViewController.swift in Sources */,
 				68523DE41FA55B9F00E8CF74 /* EditSettingsViewController.swift in Sources */,
 				1F5157461FAC00D80077CEA1 /* AttendanceSheetsTableViewController.swift in Sources */,
@@ -401,7 +402,6 @@
 				1F89DB591F86ABD2009E5C3F /* LoginPageViewController.swift in Sources */,
 				1FE73C9C1FB55063005DF62E /* TodayAttendanceViewController.swift in Sources */,
 				1F5157401FABFDE20077CEA1 /* AddNewClassViewController.swift in Sources */,
-				1FAFB1381FD32B4800195D9E /* SwitchCell.swift in Sources */,
 				1F89DB8B1F86CB1E009E5C3F /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
