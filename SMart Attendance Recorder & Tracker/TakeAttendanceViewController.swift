@@ -8,24 +8,14 @@
 
 import UIKit
 
-class TakeAttendanceViewController: UITableViewController {
+class TakeAttendanceViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var classData = AddNewClassViewController.classData
     
     @IBOutlet weak var courseLBL: UILabel!
     @IBOutlet weak var classTimLBL: UILabel!
     @IBOutlet weak var classAttperLBL: UILabel!
-    
-//    @IBOutlet weak var studentLBL: UILabel!
-//    
-//    @IBOutlet weak var percLBL: UILabel!
-//    
-//    @IBOutlet weak var presentAbsSWT: UISwitch!
-    
-    @IBAction func toggleValueChanged(_ sender: UISwitch) {
-        tableView.reloadData()
-    }
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,28 +43,19 @@ class TakeAttendanceViewController: UITableViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return Professor.numClasses()
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "newsheet_cell", for: indexPath)
-        
-        let studentLBL = cell.viewWithTag(100) as! UILabel
-        let percLBL = cell.viewWithTag(200) as! UILabel
-        let presentAbsSWT = cell.viewWithTag(300) as! UISwitch
-        
-        
-        studentLBL.text = "Aditya S T P"
-        percLBL.text = "99%"
-        presentAbsSWT.setOn(true, animated: true)
-//        
-//        let claSS = Professor.classes[indexPath.row]
-//        cell.textLabel?.text = "claSS.name"
-//        cell.detailTextLabel?.text = "12 - 12:50 PM"
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "newsheet_cell", for: indexPath) as! SwitchTableViewCell
+        cell.studentLBL.text = "\(Professor.classes[indexPath.row].name!)"
+        cell.percLBL.text = "\(Professor.classes[indexPath.row].sheets[indexPath.row].name!)"
+        cell.presentAbsSWT.setOn(true, animated: true)
         return cell
     }
     
