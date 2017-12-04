@@ -60,7 +60,8 @@
                                 </constraints>
                                 <state key="normal" title="Sign In"/>
                                 <connections>
-                                    <segue destination="49e-Tb-3d3" kind="show" id="Br5-FL-JNA"/>
+                                    <action selector="signIn:" destination="9pv-A4-QxB" eventType="touchUpInside" id="PpQ-Yz-lWV"/>
+                                    <segue destination="49e-Tb-3d3" kind="show" identifier="loginSegue" id="Br5-FL-JNA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlM-Q8-ToJ">
@@ -70,7 +71,8 @@
                                 </constraints>
                                 <state key="normal" title="Forgot Password?"/>
                                 <connections>
-                                    <segue destination="XQ9-DX-TM2" kind="show" id="2xG-eh-x74"/>
+                                    <action selector="forgotPassword:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Xyf-za-D6H"/>
+                                    <segue destination="XQ9-DX-TM2" kind="show" identifier="forgotpasswordSegue" id="2xG-eh-x74"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mUO-to-Lg0">
@@ -89,7 +91,8 @@
                                 </constraints>
                                 <state key="normal" title="Do not have an account? Register here"/>
                                 <connections>
-                                    <segue destination="ycq-mO-PhA" kind="show" id="TkT-TY-oMJ"/>
+                                    <action selector="newUserRegistration:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Nmt-dg-7HP"/>
+                                    <segue destination="ycq-mO-PhA" kind="show" identifier="registrationSegue" id="Nlr-YO-vqf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -123,7 +126,6 @@
                     <connections>
                         <outlet property="emailIDTF" destination="mUO-to-Lg0" id="m8a-63-k8a"/>
                         <outlet property="passwordTF" destination="bY4-xR-Tdq" id="jg5-du-87e"/>
-                        <outlet property="signInBTN" destination="f0C-tH-cQf" id="8Bg-gU-CfN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -633,7 +635,7 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="n12-jl-Er7">
                                             <connections>
-                                                <action selector="registerAccountBTTN:" destination="ycq-mO-PhA" id="ygL-hL-A7o"/>
+                                                <segue destination="9pv-A4-QxB" kind="show" identifier="newuserregistrationSegue" id="Qo9-dr-5oe"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -646,10 +648,24 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YrO-Jl-yZc">
                                 <rect key="frame" x="16" y="250" width="74" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HZS-hy-cbP">
+                                <rect key="frame" x="138" y="293" width="221" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Re-enter Password" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQd-qJ-bAH">
+                                <rect key="frame" x="16" y="286" width="114" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -681,12 +697,13 @@
                         <outlet property="firstNameTF" destination="4dY-bF-mPQ" id="6lg-XA-JJA"/>
                         <outlet property="lastNameTF" destination="Uyj-eJ-XEb" id="qs6-rO-eB0"/>
                         <outlet property="passwordTF" destination="lb5-Vv-YDs" id="6QL-WH-feH"/>
+                        <outlet property="reEnterPasswordTF" destination="HZS-hy-cbP" id="CI9-Wd-4fK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NNX-LW-cp5" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="1tK-ip-Quc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="148" y="-1696"/>
+            <point key="canvasLocation" x="148" y="-1696.1019490254873"/>
         </scene>
         <!--Attendance-->
         <scene sceneID="rKG-0e-TmR">
@@ -1025,6 +1042,7 @@
                                         <barButtonItem key="rightBarButtonItem" title="Reset" id="fvm-hk-spy">
                                             <connections>
                                                 <action selector="resetPasswordBTN:" destination="XQ9-DX-TM2" id="F9z-pG-3ZU"/>
+                                                <segue destination="9pv-A4-QxB" kind="show" identifier="passwordresetSegue" id="AHU-IA-sEj"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -1202,7 +1220,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="4eU-T0-iy0" kind="relationship" relationship="viewControllers" id="kfS-qa-tUX"/>
-                        <segue destination="rEx-Mm-XJ0" kind="relationship" relationship="viewControllers" id="U8O-Xu-slA"/>
                         <segue destination="7BK-E3-YNP" kind="relationship" relationship="viewControllers" id="iaW-Dn-tHN"/>
                         <segue destination="Dr9-sb-Nc7" kind="relationship" relationship="viewControllers" id="d39-0h-zMY"/>
                     </connections>
@@ -1236,6 +1253,6 @@
         <image name="first" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="U8O-Xu-slA"/>
+        <segue reference="Qo9-dr-5oe"/>
     </inferredMetricsTieBreakers>
 </document>

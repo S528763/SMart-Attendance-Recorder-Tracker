@@ -44,22 +44,48 @@ class RegisterNewAccountViewController: UIViewController {
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var firstNameTF: UITextField!
     @IBOutlet weak var lastNameTF: UITextField!
+    @IBOutlet weak var reEnterPasswordTF: UITextField!
+    
 //    @IBOutlet weak var pickerView: UIPickerView!
+    let databaseManagerInstance : DatabaseManager = DatabaseManager()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Do any additional setup after loading the view.
+    }
     
     @IBAction func registerAccountBTTN(_ sender: Any) {
-        //Create an instance of a new account with DATABASE MANAGER
-        dbManager.registerUser(userEmail: emailIDTF.text!, userPassword: passwordTF.text!, firstName: firstNameTF.text!, lastName: lastNameTF.text!)
-         self.dismiss(animated: true)
+        if shouldPerformSegue(withIdentifier: "newuserregistrationSegue", sender: self){
+            performSegue(withIdentifier: "newuserregistrationSegue", sender: self)
+        }
+        else {
+            let alertController = UIAlertController(title: "Message", message: "Please check the password or email that you have entered", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+        }
     }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "newuserregistrationSegue" && passwordTF.text! == reEnterPasswordTF.text!{
+            
+            return dbManager.registerUser(userEmail: emailIDTF.text!, userPassword: passwordTF.text!)
+        }
+        else {
+            return false
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        segue.destination as? LoginPageViewController
+    }
+    
 //    @IBAction func cancelRegisterBTTN(_ sender: Any) {
 //        self.dismiss(animated: true)
 //    }
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

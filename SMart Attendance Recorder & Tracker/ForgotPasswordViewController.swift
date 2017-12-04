@@ -11,13 +11,28 @@ import UIKit
 class ForgotPasswordViewController: UIViewController {
     
     @IBOutlet weak var emailIDTF: UITextField!
+    let databaseManagerInstance = DatabaseManager()
     
 //    @IBOutlet weak var submitBTN: UIButton!
 //    @IBAction func submit() {
 //        alertForForgotPassword(submitBTN)
 //    }
     @IBAction func resetPasswordBTN(_ sender: Any) {
-        dbManager.forgotPassword(emailID: emailIDTF.text!)
+        if shouldPerformSegue(withIdentifier: "passwordresetSegue", sender: self){
+            performSegue(withIdentifier: "passwordresetSegue", sender: self)
+        }
+    }
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "passwordresetSegue" {
+            return databaseManagerInstance.forgotPassword(emailID: emailIDTF.text!)
+            
+        }
+        else {
+            return false
+        }
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        segue.destination as? LoginPageViewController
     }
     
 //    @IBAction func alertForForgotPassword(_ sender: UIButton) {
