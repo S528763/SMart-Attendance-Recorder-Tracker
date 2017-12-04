@@ -9,19 +9,22 @@
 import Foundation
 
 class Professor {
-    static var classes:[ClaSS] = [ClaSS(name: "iOS", sheets: [Sheet(name: "11/17/2017"), Sheet(name: "11/15/2017"), Sheet(name: "11/13/2017")]), ClaSS(name: "Android", sheets: [Sheet(name: "11/17/2017"), Sheet(name: "11/15/2017"), Sheet(name: "11/13/2017")])]
     
-    static func numClasses()->Int {
-        return classes.count
-    }
+    static var classes:[ClaSS] = []
     
-    // returns a particular airline
-    static func classesNum(_ index:Int) -> ClaSS {
-        return classes[index]
-    }
-    
-    // adds a new airline to the mix
-    static func addNewClass(_ claSS:ClaSS){
-        classes.append(claSS)
-    }
+//    static var classes:[ClaSS] = [ClaSS(name: "iOS", sheets: [Sheet(name: "11/17/2017"), Sheet(name: "11/15/2017"), Sheet(name: "11/13/2017")]), ClaSS(name: "Android", sheets: [Sheet(name: "11/17/2017"), Sheet(name: "11/15/2017"), Sheet(name: "11/13/2017")])]
+//
+//    static func numClasses()->Int {
+//        return classes.count
+//    }
+//
+//    // returns a particular airline
+//    static func classesNum(_ index:Int) -> ClaSS {
+//        return classes[index]
+//    }
+//
+//    // adds a new airline to the mix
+//    static func addNewClass(_ claSS:ClaSS){
+//        classes.append(claSS)
+//    }
 }

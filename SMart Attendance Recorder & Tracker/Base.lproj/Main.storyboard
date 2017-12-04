@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -819,7 +820,7 @@
                                     <navigationItem title="Create New Sheet" id="XD5-ir-DI8">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="m0I-OP-chn">
                                             <connections>
-                                                <segue destination="YhJ-Tx-RCf" kind="unwind" unwindAction="cancelWithUnwindSegue:" id="5Yc-k9-TuQ"/>
+                                                <segue destination="YhJ-Tx-RCf" kind="unwind" unwindAction="cancelAddingNewSheetWithSegue:" id="SXW-xY-x7Q"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="JHr-av-L8x">
@@ -1254,4 +1255,7 @@
     <resources>
         <image name="first" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="QBv-XG-vpT"/>
+    </inferredMetricsTieBreakers>
 </document>

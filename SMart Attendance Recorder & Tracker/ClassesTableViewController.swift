@@ -8,9 +8,9 @@
 
 import UIKit
 
-class ClassesTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ClassesTableViewController: UITableViewController {
     
-    @IBOutlet weak var tableView: UITableView! 
+  //  @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,22 +46,22 @@ class ClassesTableViewController: UIViewController, UITableViewDelegate, UITable
     
     // MARK: - Table view data source
     
-    func numberOfSections(in tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return Professor.classes.count
     }
     
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "class_cell", for: indexPath)
         let claSS = Professor.classes[indexPath.row]
         cell.textLabel?.text = claSS.name
-        cell.detailTextLabel?.text = "12 - 12:50 PM"
+        cell.detailTextLabel?.text = claSS.classTiming
         return cell
     }
     

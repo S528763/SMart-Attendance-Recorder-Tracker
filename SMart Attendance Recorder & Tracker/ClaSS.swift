@@ -15,18 +15,21 @@ class ClaSS : NSObject {
     var created:NSDate?
     var updated:NSDate?
     var sheets: [Sheet] = []
+    var classTiming:String?
     
-    init(name:String, sheets:[Sheet]){
+    init(name:String, sheets:[Sheet], classTiming:String){
         self.name = name
         self.sheets = sheets
+        self.classTiming = classTiming
     }
     
     override var description: String {
-        return "name: \(String(describing:name)), sheets: \(String(describing: sheets)), objectId: \(String(describing:objectId))"
+        return "name: \(String(describing:name)), sheets: \(String(describing: sheets)), class Timing: \(String(describing:classTiming)), objectId: \(String(describing:objectId))"
     }
     
-    init(name:String){
+    init(name:String, classTiming:String){
         self.name = name
+        self.classTiming = classTiming
     }
     override init(){
         super.init()

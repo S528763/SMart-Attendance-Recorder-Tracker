@@ -63,8 +63,8 @@ class AddNewClassViewController: UIViewController {
         // add new class
       //  dbManager.addNewClass(course: courseTF.text!, timing: classTimTF.text!)
         
-        let addClass = ClaSS(name: courseTF.text!)
-        Professor.addNewClass(addClass)
+//        let addClass = ClaSS(name: courseTF.text, classTiming: classTimTF.text)
+//        Professor.addNewClass(addClass)
         dismiss(animated: true, completion: nil)
     }
     

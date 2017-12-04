@@ -10,7 +10,7 @@ import UIKit
 
 class StudentProfileViewController: UIViewController {
     
-    var student:Student!
+  //  var student:Student!
 
     @IBAction func cancel(_ sender: Any) {
         self.dismiss(animated: true)
@@ -23,10 +23,10 @@ class StudentProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        nameLBL.text! = student.name
-        attendanceLBL.text! = "\(student.attendance)"
-        phoneLBL.text! = student.phone
-        emailLBL.text! = student.email
+//        nameLBL.text! = student.name
+//        attendanceLBL.text! = "\(student.attendance)"
+//        phoneLBL.text! = student.phone
+//        emailLBL.text! = student.email
         
     }
 
