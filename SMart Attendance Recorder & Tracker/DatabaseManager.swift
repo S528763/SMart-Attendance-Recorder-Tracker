@@ -25,47 +25,50 @@ class DatabaseManager {
         dataStoreClass = backendless.data.of(ClaSS.ofClass())
         dataStoreSheet = backendless.data.of(Sheet.ofClass())
     }
-    func registerUser(userEmail : String , userPassword : String, firstName : String, lastName : String) {
+    func registerUser(userEmail : String , userPassword : String) -> Bool {
         // creating backendless user object
+        var hasRegistered : Bool = false
         let user = BackendlessUser()
         user.setProperty("email", object: userEmail)
         user.password = userPassword as NSString
-        user.setProperty("firstName", object: firstName)
-        user.setProperty("lastName", object: lastName)
-        self.backendless.userService.register(user,
-                                              response: {
-                                                (registeredUser : BackendlessUser?) -> Void in
-                                                print("User registered \(String(describing: registeredUser?.value(forKey: "email")))")
-        },
-                                              error: {
-                                                (fault : Fault?) -> Void in
-                                                print("Server reported an error: \(String(describing: fault?.description))")
+        Types.tryblock({() -> Void in
+            self.backendless.userService.register(user)
+            hasRegistered = true
+        }, catchblock: {(exception)->Void in
+            print(exception)
+            hasRegistered = false
         })
+        return hasRegistered
     }
-    func loginUser (userEmail : String , userPassword : String )  -> Bool{
+    func loginUser (userEmail : String , userPassword : String )  -> Bool {
         var isLoggedIn : Bool = false
-        self.backendless.userService.login(userEmail,
-                                           password: userPassword,
-                                           response: {
-                                            (loggedUser : BackendlessUser?) -> Void in
-                                            isLoggedIn = true
-                                            print("Logged In Succesfull")
+        Types.tryblock({ () -> Void in
+            
+            self.backendless.userService.login(userEmail, password: userPassword)
+            
+            isLoggedIn = true
+            
+            
         },
-                                           error: {
-                                            (fault : Fault?) -> Void in
-                                            isLoggedIn = false
+                       catchblock: { (exception) -> Void in
+                        isLoggedIn = false
+                        
         })
+        
+        
         return isLoggedIn
     }
-    func forgotPassword(emailID : String){
-        self.backendless.userService.restorePassword(emailID,
-                                                     response: {
-                                                        (result : Any) -> Void in
-                                                        print("Please check your email inbox to reset your password")
-        },
-                                                     error: {
-                                                        (fault : Fault?) -> Void in
-                                                        print("Server reported an error: \(String(describing: fault?.description))")
-        })
+    func forgotPassword(emailID : String) -> Bool {
+        var hasSentMail : Bool = false
+        
+        Types.tryblock({()-> Void in
+            self.backendless.userService.restorePassword(emailID)
+            hasSentMail = true
+        }, catchblock: {(exception)->Void in
+            hasSentMail = false
+        }
+            
+        )
+        return hasSentMail
     }
 }

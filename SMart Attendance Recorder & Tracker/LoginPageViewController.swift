@@ -16,9 +16,59 @@ class LoginPageViewController: UIViewController {
 //    @IBAction func signInBTTN(_ sender: Any) {
 //        login( usernameTF.text!, passwordTF.text!)
 //    }
+    let databaseManagerInstance = DatabaseManager()
     @IBOutlet weak var emailIDTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
-    @IBOutlet weak var signInBTN: UIButton!
+    
+    
+    @IBAction func signIn(_ sender: Any) {
+        if shouldPerformSegue(withIdentifier: "loginSegue", sender: self) {
+            performSegue(withIdentifier: "loginSegue", sender: self)
+        }
+        else {
+            let alertController = UIAlertController(title: "Message", message: "Login unsucessfull", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func newUserRegistration(_ sender: Any) {
+        if shouldPerformSegue(withIdentifier: "registrationSegue", sender: self){
+            performSegue(withIdentifier: "registrationSegue", sender: self)
+        }
+    }
+    
+    @IBAction func forgotPassword(_ sender: Any) {
+        if shouldPerformSegue(withIdentifier: "forgotpasswordSegue", sender: self){
+            performSegue(withIdentifier: "forgotpasswordSegue", sender: self)
+        }
+    }
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "loginSegue" {
+            return databaseManagerInstance.loginUser(userEmail: emailIDTF.text!, userPassword: passwordTF.text!)
+        }
+        else if identifier == "registrationSegue"{
+            return true
+        }
+        else if identifier == "forgotpasswordSegue" {
+            return true
+        }
+        else {
+            return false
+        }
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "loginSegue"{
+            _ = segue.destination as? ClassesTableViewController
+        }
+        else if segue.identifier == "newuserregistrationSegue" {
+            _ =  segue.destination as? RegisterNewAccountViewController
+        }
+        else if segue.identifier == "forgotpasswordSegue" {
+            _ = segue.destination as? ForgotPasswordViewController
+        }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,20 +81,17 @@ class LoginPageViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func signIn(_ sender: Any) {
-        if !dbManager.loginUser(userEmail: emailIDTF.text!, userPassword: passwordTF.text!) {
-            alertForInvalidSignIn(signInBTN)
-        }
-    }
+   
     
-    @IBAction func alertForInvalidSignIn(_ sender: UIButton) {
-        let alert = UIAlertController(title: "Oops!", message: "You havn't entered a valid value, Please try again.", preferredStyle: UIAlertControllerStyle.alert)
-        
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-        
-        self.present(alert, animated: true, completion: nil)
-    }
     
+//    @IBAction func alertForInvalidSignIn(_ sender: UIButton) {
+//        let alert = UIAlertController(title: "Oops!", message: "You havn't entered a valid value, Please try again.", preferredStyle: UIAlertControllerStyle.alert)
+//
+//        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+//
+//        self.present(alert, animated: true, completion: nil)
+//    }
+
 //    func login(_ username:String, _ password:String) -> Void{
 //        // Make sure that the username and password exist in the database
 //        // If they exist, login to the user's account
