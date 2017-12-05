@@ -10,23 +10,15 @@ import UIKit
 
 class LoginPageViewController: UIViewController {
     
-    
-//    @IBOutlet weak var usernameTF: UITextField!
-//    @IBOutlet weak var passwordTF: UITextField!
-//    @IBAction func signInBTTN(_ sender: Any) {
-//        login( usernameTF.text!, passwordTF.text!)
-//    }
-    let databaseManagerInstance = DatabaseManager()
     @IBOutlet weak var emailIDTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
-    
     
     @IBAction func signIn(_ sender: Any) {
         if shouldPerformSegue(withIdentifier: "loginSegue", sender: self) {
             performSegue(withIdentifier: "loginSegue", sender: self)
         }
         else {
-            let alertController = UIAlertController(title: "Message", message: "Login unsucessfull", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Oops!", message: "Login unsucessful, Please try again.", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
             self.present(alertController, animated: true, completion: nil)
         }
@@ -45,7 +37,7 @@ class LoginPageViewController: UIViewController {
     }
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         if identifier == "loginSegue" {
-            return databaseManagerInstance.loginUser(userEmail: emailIDTF.text!, userPassword: passwordTF.text!)
+            return dbManager.loginUser(userEmail: emailIDTF.text!, userPassword: passwordTF.text!)
         }
         else if identifier == "registrationSegue"{
             return true
@@ -102,6 +94,7 @@ class LoginPageViewController: UIViewController {
 //    func dismissVC(_ sender: Any) {
 //        dismiss(animated: true, completion: nil)
 //    }
+    
     @IBAction func cancel(unwindSegue: UIStoryboardSegue){
         
     }

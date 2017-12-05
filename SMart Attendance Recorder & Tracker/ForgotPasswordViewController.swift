@@ -11,29 +11,26 @@ import UIKit
 class ForgotPasswordViewController: UIViewController {
     
     @IBOutlet weak var emailIDTF: UITextField!
-    let databaseManagerInstance = DatabaseManager()
     
-//    @IBOutlet weak var submitBTN: UIButton!
-//    @IBAction func submit() {
-//        alertForForgotPassword(submitBTN)
-//    }
     @IBAction func resetPasswordBTN(_ sender: Any) {
         if shouldPerformSegue(withIdentifier: "passwordresetSegue", sender: self){
             performSegue(withIdentifier: "passwordresetSegue", sender: self)
         }
     }
+    
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         if identifier == "passwordresetSegue" {
-            return databaseManagerInstance.forgotPassword(emailID: emailIDTF.text!)
+            return dbManager.forgotPassword(emailID: emailIDTF.text!)
             
         }
         else {
             return false
         }
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        segue.destination as? LoginPageViewController
-    }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        segue.destination as? LoginPageViewController
+//    }
     
 //    @IBAction func alertForForgotPassword(_ sender: UIButton) {
 //        let alert = UIAlertController(title: "Reset done!", message: "Check email for credentials", preferredStyle: UIAlertControllerStyle.alert)
@@ -43,25 +40,12 @@ class ForgotPasswordViewController: UIViewController {
 //        self.present(alert, animated: true, completion: nil)
 //    }
     
-//    @IBAction func sendEmailBTTN(_ sender: Any) {
-//        //send the person an email.... Somehow...
-//        self.dismiss(animated: true)
-//    }
-//
-//    @IBAction func cancelBTTN(_ sender: Any) {
-//        self.dismiss(animated: true)
-//    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
     }
     
-//    @IBAction func forgotDone(_ sender: Any) {
-//        self.dismiss(animated: true, completion: nil)
-//    }
-//    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

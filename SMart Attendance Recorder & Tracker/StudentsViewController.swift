@@ -23,7 +23,7 @@ class StudentsViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "student-cell")!// in lieu of UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "student_cell")!// in lieu of UITableViewCell()
     //    cell.textLabel?.text = students[indexPath.row].name
         return cell
     }

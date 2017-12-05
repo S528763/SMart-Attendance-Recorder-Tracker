@@ -8,9 +8,9 @@
 
 import UIKit
 
-class ClassesTableViewController: UITableViewController {
+class ClassesTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-  //  @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,7 @@ class ClassesTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        NotificationCenter.default.addObserver(self, selector: #selector(newClassAdded(notification:)), name: NSNotification.Name(rawValue:"New Class Added"), object: nil)
+     //   NotificationCenter.default.addObserver(self, selector: #selector(newClassAdded(notification:)), name: NSNotification.Name(rawValue:"New Class Added"), object: nil)
     }
     
     @objc func newClassAdded(notification:Notification){
@@ -46,18 +46,18 @@ class ClassesTableViewController: UITableViewController {
     
     // MARK: - Table view data source
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return Professor.classes.count
     }
     
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "class_cell", for: indexPath)
         let claSS = Professor.classes[indexPath.row]
         cell.textLabel?.text = claSS.name
