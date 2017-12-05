@@ -10,6 +10,8 @@ import UIKit
 
 class TodayAttendanceViewController: UIViewController {
 
+    var sheet:Sheet!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

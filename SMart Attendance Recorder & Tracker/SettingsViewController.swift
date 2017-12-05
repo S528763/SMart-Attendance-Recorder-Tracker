@@ -14,8 +14,7 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet weak var nameLBL: UILabel!
     @IBOutlet weak var emailLBL: UILabel!
-    @IBOutlet weak var phoneNumberLBL: UILabel!
-    
+    @IBOutlet weak var phoneNumberLBL: UILabel!   
     
     
     @IBAction func deleteSheetBTN(_ sender: Any) {

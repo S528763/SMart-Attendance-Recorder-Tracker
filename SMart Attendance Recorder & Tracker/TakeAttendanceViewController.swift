@@ -7,15 +7,18 @@
 //
 
 import UIKit
+import CoreLocation
 
 class TakeAttendanceViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    var claSS:Klass!
     
     var classData = AddNewClassViewController.classData
     
     @IBOutlet weak var courseLBL: UILabel!
     @IBOutlet weak var classTimLBL: UILabel!
     @IBOutlet weak var classAttperLBL: UILabel!
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,7 +57,7 @@ class TakeAttendanceViewController: UIViewController, UITableViewDataSource, UIT
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "newsheet_cell", for: indexPath) as! SwitchTableViewCell
         cell.studentLBL.text = "\(Professor.classes[indexPath.row].name!)"
-        cell.percLBL.text = "\(Professor.classes[indexPath.row].sheets[indexPath.row].name!)"
+        cell.percLBL.text = "\(Professor.classes[indexPath.row].sheets![indexPath.row].name!)"
         cell.presentAbsSWT.setOn(true, animated: true)
         return cell
     }
@@ -69,5 +72,10 @@ class TakeAttendanceViewController: UIViewController, UITableViewDataSource, UIT
      }
      */
     
+    @IBAction func addNewSheet(_ sender: Any) {
+        let sheet = Sheet(name: Date())
+        dbManager.addNewSheet(sheet, to:claSS)
+        dismiss(animated: true, completion: nil)
+    }
 }
 

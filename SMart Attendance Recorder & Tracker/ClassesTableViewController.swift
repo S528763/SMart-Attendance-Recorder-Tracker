@@ -16,13 +16,9 @@ class ClassesTableViewController: UIViewController, UITableViewDataSource, UITab
         super.viewDidLoad()
         
         self.navigationItem.title = "Classes"
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
         
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        
-     //   NotificationCenter.default.addObserver(self, selector: #selector(newClassAdded(notification:)), name: NSNotification.Name(rawValue:"New Class Added"), object: nil)
+        // Register the method to be called when a new class is added
+        NotificationCenter.default.addObserver(self, selector: #selector(newClassAdded(notification:)), name: NSNotification.Name(rawValue:"New Class Added"), object: nil)
     }
     
     @objc func newClassAdded(notification:Notification){
@@ -35,7 +31,7 @@ class ClassesTableViewController: UIViewController, UITableViewDataSource, UITab
     
     // Refreshes the lit of classes
     func refreshClasses(){
-        //Professor.classes = dbManager.retrieveAllClasses()
+        Professor.classes = dbManager.retrieveAllClasses()
         tableView.reloadData()
     }
     

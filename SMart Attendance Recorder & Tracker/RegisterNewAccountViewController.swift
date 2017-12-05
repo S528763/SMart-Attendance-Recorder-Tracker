@@ -37,9 +37,9 @@ class RegisterNewAccountViewController: UIViewController {
         }
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        segue.destination as? LoginPageViewController
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        segue.destination as? LoginPageViewController
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -452,8 +452,8 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="8rJ-Kc-sve" id="lEZ-Kg-Ea1"/>
-                                    <outlet property="delegate" destination="8rJ-Kc-sve" id="kt0-zg-mbV"/>
+                                    <outlet property="dataSource" destination="8rJ-Kc-sve" id="BRR-gz-KhV"/>
+                                    <outlet property="delegate" destination="8rJ-Kc-sve" id="0gr-re-HEL"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -468,7 +468,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="tableView" destination="Lnf-5x-TNa" id="IFO-4R-BUx"/>
+                        <outlet property="tableView" destination="Lnf-5x-TNa" id="nfN-F9-ih9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
@@ -641,7 +641,7 @@
                                     <navigationItem title="Register" id="mWB-EW-pBz">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="vZF-T5-2Jr">
                                             <connections>
-                                                <segue destination="1tK-ip-Quc" kind="unwind" unwindAction="cancelWithUnwindSegue:" id="eeu-aH-ucy"/>
+                                                <segue destination="1tK-ip-Quc" kind="unwind" unwindAction="cancelRegistrationWithSegue:" id="cTx-wM-JvT"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="n12-jl-Er7">
@@ -843,7 +843,7 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="JHr-av-L8x">
                                             <connections>
-                                                <action selector="attendanceDone:" destination="5Dl-D6-kE9" id="byE-hY-TnP"/>
+                                                <action selector="addNewSheet:" destination="5Dl-D6-kE9" id="sCb-NF-Wa3"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -1075,7 +1075,7 @@
                                     <navigationItem title="Forgot Password" id="aWI-b0-E8s">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="43x-Ud-YtX">
                                             <connections>
-                                                <segue destination="c2B-gu-sTl" kind="unwind" unwindAction="cancelWithUnwindSegue:" id="4Hg-hF-NQN"/>
+                                                <segue destination="c2B-gu-sTl" kind="unwind" unwindAction="cancelForgotPasswordWithSegue:" id="4Iz-Zm-WgC"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Reset" id="fvm-hk-spy">
@@ -1274,6 +1274,6 @@
         <image name="first" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Qo9-dr-5oe"/>
+        <segue reference="AHU-IA-sEj"/>
     </inferredMetricsTieBreakers>
 </document>

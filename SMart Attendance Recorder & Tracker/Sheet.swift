@@ -11,11 +11,13 @@ import Foundation
 @objcMembers
 class Sheet : NSObject {
     
-    var name:String?
+    var name:Date?
     var objectId:String?
     var created:NSDate?
     var updated:NSDate?
-    var claSS:ClaSS?
+    var course:String?
+    
+    var claSS:Klass?
     
     override var description: String {
         return "Name: \(String(describing: name))"
@@ -25,7 +27,7 @@ class Sheet : NSObject {
         super.init()
     }
     
-    init(name:String?) {
+    init(name:Date?) {
         self.name = name
     }
     

@@ -9,12 +9,12 @@
 import Foundation
 
 @objcMembers
-class ClaSS : NSObject {
+class Klass : NSObject {
     var objectId:String?
     var name:String?
     var created:NSDate?
     var updated:NSDate?
-    var sheets: [Sheet] = []
+    var sheets: [Sheet]? = []
     var classTiming:String?
     
     init(name:String, sheets:[Sheet], classTiming:String){
