@@ -10,14 +10,11 @@ import Foundation
 
 @objcMembers
 class Sheet : NSObject {
-    
     var name:Date?
     var objectId:String?
     var created:NSDate?
-    var updated:NSDate?
-    var course:String?
-    
-    var claSS:Klass?
+    var updated:NSDate?    
+    var claSS:ClaSS?
     
     override var description: String {
         return "Name: \(String(describing: name))"

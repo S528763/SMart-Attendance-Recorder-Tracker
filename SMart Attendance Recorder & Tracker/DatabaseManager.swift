@@ -22,7 +22,7 @@ class DatabaseManager {
     init(){
         backendless.hostURL = SERVER_URL
         backendless.initApp(APPLICATION_ID, apiKey: API_KEY)
-        dataStoreClass = backendless.data.of(Klass.ofClass())
+        dataStoreClass = backendless.data.of(ClaSS.ofClass())
         dataStoreSheet = backendless.data.of(Sheet.ofClass())
     }
     
@@ -79,7 +79,7 @@ class DatabaseManager {
     }
     
     // Returns a Class with the given name - nil if not in table
-    func findClass(named:String?, timing:String?) -> Klass? {
+    func findClass(named:String?, timing:String?) -> ClaSS? {
         if named == nil && timing == nil {
             return nil
         }
@@ -87,7 +87,7 @@ class DatabaseManager {
         queryBuilder!.setWhereClause("name LIKE '%\(named!)%' and classTiming LIKE '%\(timing!)%'")
         
         if let classes = self.dataStoreClass?.find(queryBuilder) {
-            return classes.count > 0 ? classes[0] as? Klass : nil
+            return classes.count > 0 ? classes[0] as? ClaSS : nil
         } else {
             return nil
         }
@@ -98,26 +98,26 @@ class DatabaseManager {
     func addNewClass(named possibleClassName:String?, timing possibleClassTiming:String?){
         
         if findClass(named: possibleClassName, timing: possibleClassTiming) == nil {
-            dataStoreClass?.save(Klass(name:possibleClassName!, classTiming: possibleClassTiming!),
-                                  response: {(result) in NotificationCenter.default.post(name: NSNotification.Name(rawValue: "New Class Added"), object: nil)},
-                                  error: {(fault:Fault?)->Void in print("\(String(describing: fault)) happened while saving a Class)")})
+            dataStoreClass?.save(ClaSS(name:possibleClassName!, classTiming: possibleClassTiming!),
+                                 response: {(result) in NotificationCenter.default.post(name: NSNotification.Name(rawValue: "New Class Added"), object: nil)},
+                                 error: {(fault:Fault?)->Void in print("\(String(describing: fault)) happened while saving a Class)")})
         }
         
     }
     
-    func addNewSheet(_ newSheet:Sheet, to claSS:Klass) -> Void {
+    func addNewSheet(_ newSheet:Sheet, to claSS:ClaSS) -> Void {
         self.dataStoreSheet?.save(newSheet,
-                                 response: {(result:Any?)->Void in
+                                  response: {(result:Any?)->Void in
                                     let savedSheet = result as! Sheet
                                     let _ = self.dataStoreSheet?.setRelation("claSS:ClaSS:1",
-                                                                            parentObjectId: savedSheet.objectId,
-                                                                            childObjects: [claSS.objectId!])
+                                                                             parentObjectId: savedSheet.objectId,
+                                                                             childObjects: [claSS.objectId!])
                                     let _ = self.dataStoreClass?.addRelation("sheets:Sheet:n",
-                                                                              parentObjectId: claSS.objectId,
-                                                                              childObjects: [savedSheet.objectId!])
+                                                                             parentObjectId: claSS.objectId,
+                                                                             childObjects: [savedSheet.objectId!])
                                     NotificationCenter.default.post(name: NSNotification.Name(rawValue: "New Sheet Added"), object:nil)
         },
-                                 error: {(fault:Fault?)->Void in print("\(String(describing: fault)) happened while saving a Sheet)")})
+                                  error: {(fault:Fault?)->Void in print("\(String(describing: fault)) happened while saving a Sheet)")})
         
     }
     
@@ -141,7 +141,7 @@ class DatabaseManager {
     }
     
     // retrns all sheets of a specified Class
-    func retrieveSheets(of ClaSS:Klass) -> [Sheet] {
+    func retrieveSheets(of ClaSS:ClaSS) -> [Sheet] {
         
         let loadRelationsQueryBuilder = LoadRelationsQueryBuilder.of(ClaSS.ofClass())
         loadRelationsQueryBuilder!.setRelationName("sheets")
@@ -162,22 +162,26 @@ class DatabaseManager {
     }
     
     // returns all Counties
-    func retrieveAllClasses() ->[Klass]{
+    func retrieveAllClasses() ->[ClaSS]{
         
         let pageSize = 10
         var numClassesFetched = 0
-        var allClasses:[Klass] = []
+        var allClasses:[ClaSS] = []
         Types.tryblock(
             {   ()->Void in
                 let numClassesToFetch = self.dataStoreClass?.getObjectCount() as! Int
+                print(numClassesToFetch)
                 
                 let queryBuilder = DataQueryBuilder()
-                
+                print("Query builder idi \(queryBuilder!)")
+                print("datastore class idi \(self.dataStoreClass?.find(queryBuilder) )")
                 queryBuilder!.setPageSize(Int32(pageSize)).setOffset(0)
                 
                 
                 while(numClassesFetched < numClassesToFetch) {
-                    let classes = self.dataStoreClass?.find(queryBuilder) as! [Klass]
+                    print("while loop lo ki vachindi")
+                    let classes = self.dataStoreClass?.find(queryBuilder) as! [ClaSS]
+                    print(classes)
                     allClasses += classes
                     numClassesFetched += classes.count
                     queryBuilder!.prepareNextPage()
@@ -219,8 +223,8 @@ class DatabaseManager {
     }
     
     // updates a Class
-    func updateClass(_ claSS:Klass){
-        let _ = dataStoreClass?.save(claSS) as! Klass
+    func updateClass(_ claSS:ClaSS){
+        let _ = dataStoreClass?.save(claSS) as! ClaSS
     }
     
 }

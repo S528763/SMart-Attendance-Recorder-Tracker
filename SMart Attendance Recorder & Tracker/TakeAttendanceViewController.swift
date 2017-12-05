@@ -11,7 +11,7 @@ import CoreLocation
 
 class TakeAttendanceViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var claSS:Klass!
+    var claSS:ClaSS!
     
     var classData = AddNewClassViewController.classData
     

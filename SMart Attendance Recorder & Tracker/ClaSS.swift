@@ -9,13 +9,13 @@
 import Foundation
 
 @objcMembers
-class Klass : NSObject {
+class ClaSS : NSObject {
     var objectId:String?
     var name:String?
+    var classTiming:String?
     var created:NSDate?
     var updated:NSDate?
-    var sheets: [Sheet]? = []
-    var classTiming:String?
+    var sheets: [Sheet]? = []    
     
     init(name:String, sheets:[Sheet], classTiming:String){
         self.name = name
@@ -33,6 +33,8 @@ class Klass : NSObject {
     }
     override init(){
         super.init()
+        name = "iOS"
+        classTiming = "12 PM"
     }
 }
 
