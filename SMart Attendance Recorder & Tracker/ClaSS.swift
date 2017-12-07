@@ -8,33 +8,14 @@
 
 import Foundation
 
-@objcMembers
-class ClaSS : NSObject {
-    var objectId:String?
-    var name:String?
-    var classTiming:String?
-    var created:NSDate?
-    var updated:NSDate?
-    var sheets: [Sheet]? = []    
+class ClaSS {
+    var name:String
+    var classTiming:String
+    var sheets:[Sheet]
     
     init(name:String, sheets:[Sheet], classTiming:String){
         self.name = name
         self.sheets = sheets
         self.classTiming = classTiming
     }
-    
-    override var description: String {
-        return "name: \(String(describing:name)), sheets: \(String(describing: sheets)), class Timing: \(String(describing:classTiming)), objectId: \(String(describing:objectId))"
-    }
-    
-    init(name:String, classTiming:String){
-        self.name = name
-        self.classTiming = classTiming
-    }
-    override init(){
-        super.init()
-        name = "iOS"
-        classTiming = "12 PM"
-    }
 }
-

@@ -36,10 +36,16 @@ class AddNewClassViewController: UIViewController {
     }
     */
     
-    @IBAction func addNewClass(_ sender: Any) {
-        // add new class
-        dbManager.addNewClass(named: courseTF.text!, timing: classTimTF.text!)
-        dismiss(animated: true, completion: nil)
+//    @IBAction func addNewClass(_ sender: Any) {
+//        // add new class
+//        dbManager.addNewClass(named: courseTF.text!, timing: classTimTF.text!)
+//        dismiss(animated: true, completion: nil)
+//    }
+    
+    @IBAction func addNewClass(sender: Any){
+        let classToAdd = ClaSS(name: courseTF.text!, sheets: [], classTiming: classTimTF.text!)
+        Professor.addNewClass(classToAdd)
+        self.dismiss(animated: true, completion: nil)
     }
     
 }

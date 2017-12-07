@@ -44,7 +44,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bY4-xR-Tdq">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="password-1" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bY4-xR-Tdq">
                                 <rect key="frame" x="126" y="185" width="228" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="228" id="MBy-a8-af0"/>
@@ -75,7 +75,7 @@
                                     <segue destination="XQ9-DX-TM2" kind="show" identifier="forgotpasswordSegue" id="2xG-eh-x74"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mUO-to-Lg0">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="stp.aditya@gmail.com" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mUO-to-Lg0">
                                 <rect key="frame" x="126" y="135" width="228" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="228" id="ZCW-Td-QiW"/>
@@ -451,8 +451,8 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="8rJ-Kc-sve" id="BRR-gz-KhV"/>
-                                    <outlet property="delegate" destination="8rJ-Kc-sve" id="0gr-re-HEL"/>
+                                    <outlet property="dataSource" destination="8rJ-Kc-sve" id="C1s-nY-XTl"/>
+                                    <outlet property="delegate" destination="8rJ-Kc-sve" id="4Rw-N6-jYN"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -467,7 +467,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="tableView" destination="Lnf-5x-TNa" id="nfN-F9-ih9"/>
+                        <outlet property="tableView" destination="Lnf-5x-TNa" id="z6l-hw-WrD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
@@ -518,7 +518,7 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Create" id="B7f-Uc-S0P">
                                             <connections>
-                                                <action selector="addNewClass:" destination="bdE-c1-I4Y" id="8eN-YO-afx"/>
+                                                <action selector="addNewClassWithSender:" destination="bdE-c1-I4Y" id="Cb6-to-JTU"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -750,6 +750,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="rEx-Mm-XJ0" id="E1W-cA-IPY"/>
+                                    <outlet property="delegate" destination="rEx-Mm-XJ0" id="VQt-jM-Y3C"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.78268290480000002" green="0.90212563450000005" blue="0.76741221989999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -763,6 +767,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="kem-U5-rUi" id="QOa-mf-iVl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VTd-1R-WCc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

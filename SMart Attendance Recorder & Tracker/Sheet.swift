@@ -8,24 +8,16 @@
 
 import Foundation
 
-@objcMembers
-class Sheet : NSObject {
-    var name:Date?
-    var objectId:String?
-    var created:NSDate?
-    var updated:NSDate?    
-    var claSS:ClaSS?
+class Sheet: Equatable {
     
-    override var description: String {
-        return "Name: \(String(describing: name))"
-    }
-    
-    override init(){
-        super.init()
-    }
+    var name:Date!
     
     init(name:Date?) {
         self.name = name
+    }
+    
+    convenience init() {
+        self.init(name: Date())
     }
     
     static func ==(lhs: Sheet, rhs: Sheet) -> Bool {

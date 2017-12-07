@@ -56,8 +56,8 @@ class TakeAttendanceViewController: UIViewController, UITableViewDataSource, UIT
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "newsheet_cell", for: indexPath) as! SwitchTableViewCell
-        cell.studentLBL.text = "\(Professor.classes[indexPath.row].name!)"
-        cell.percLBL.text = "\(Professor.classes[indexPath.row].sheets![indexPath.row].name!)"
+        cell.studentLBL.text = "\(Professor.classes[indexPath.row].name)"
+        cell.percLBL.text = "\(Professor.classes[indexPath.row].sheets[indexPath.row].name!)"
         cell.presentAbsSWT.setOn(true, animated: true)
         return cell
     }
@@ -73,8 +73,8 @@ class TakeAttendanceViewController: UIViewController, UITableViewDataSource, UIT
      */
     
     @IBAction func addNewSheet(_ sender: Any) {
-        let sheet = Sheet(name: Date())
-        dbManager.addNewSheet(sheet, to:claSS)
+        let sheetToAdd = Sheet(name: Date())
+        Professor.addNewSheet(sheetToAdd)
         dismiss(animated: true, completion: nil)
     }
 }

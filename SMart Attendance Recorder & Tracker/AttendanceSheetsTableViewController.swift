@@ -8,28 +8,20 @@
 
 import UIKit
 
-class AttendanceSheetsTableViewController: UITableViewController {
+class AttendanceSheetsTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var tableView: UITableView!
     
     var claSS:ClaSS!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = claSS.name
-        NotificationCenter.default.addObserver(self, selector: #selector(newSheetAdded(_:)), name: NSNotification.Name(rawValue:"New Bird Added"), object: nil)
+        self.navigationItem.title = "Class"
     }
     
-    @objc func newSheetAdded(_ notification:Notification?){
-        refreshSheets()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        refreshSheets()
-    }
-    
-    func refreshSheets(){
-        claSS.sheets = dbManager.retrieveSheets(of: claSS!)
-        tableView.reloadData()
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//
+//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -38,21 +30,20 @@ class AttendanceSheetsTableViewController: UITableViewController {
     
     // MARK: - Table view data source
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return claSS.sheets!.count
+        return claSS.sheets.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "sheets_cell")
-        let sheet = claSS.sheets![indexPath.row]
-        cell?.textLabel?.text = "\(sheet.name!)"
-        return cell!
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "sheets_cell", for: indexPath)
+        cell.textLabel?.text = "\(claSS.sheets[indexPath.row].name)"
+        return cell
     }
     
     // destination for Unwind Segue
@@ -72,7 +63,7 @@ class AttendanceSheetsTableViewController: UITableViewController {
         
         if segue.identifier == "Today_Attendance_View_Controller" {
             let sheetVC = segue.destination as! TodayAttendanceViewController
-            sheetVC.sheet = claSS.sheets![(tableView.indexPathForSelectedRow?.row)!]
+            sheetVC.sheet = claSS.sheets[(tableView.indexPathForSelectedRow?.row)!]
         } else {
             let addNewSheetVC = segue.destination as! TakeAttendanceViewController
             addNewSheetVC.claSS = claSS
