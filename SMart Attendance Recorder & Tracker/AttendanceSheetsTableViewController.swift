@@ -65,8 +65,8 @@ class AttendanceSheetsTableViewController: UIViewController, UITableViewDelegate
             let sheetVC = segue.destination as! TodayAttendanceViewController
             sheetVC.sheet = AttendanceSheetsTableViewController.claSS.sheets[(tableView.indexPathForSelectedRow?.row)!]
         } else {
-            let addNewSheetVC = segue.destination as! TakeAttendanceViewController
-            addNewSheetVC.claSS = AttendanceSheetsTableViewController.claSS
+            let _ = segue.destination as! TakeAttendanceViewController
+            TakeAttendanceViewController.claSS = AttendanceSheetsTableViewController.claSS
         }
     }
     

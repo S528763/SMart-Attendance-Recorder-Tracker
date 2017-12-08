@@ -11,9 +11,9 @@ import CoreLocation
 
 class Professor {
     
-//    static var classes:[ClaSS] = []
+    static var classes:[ClaSS] = []
     
-    static var classes:[ClaSS] = [ClaSS(name: "iOS", sheets: [Sheet(name: Date())], classTiming: "12:00"), ClaSS(name: "Android", sheets: [Sheet(name: Date())], classTiming: "12:00")]
+//    static var classes:[ClaSS] = [ClaSS(name: "iOS", sheets: [Sheet(name: Date())], classTiming: "12:00"), ClaSS(name: "Android", sheets: [Sheet(name: Date())], classTiming: "12:00")]
 
     static func numClasses()->Int {
         return classes.count
