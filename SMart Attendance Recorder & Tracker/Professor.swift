@@ -11,9 +11,9 @@ import CoreLocation
 
 class Professor {
     
-    static var classes:[ClaSS] = []
+//    static var classes:[ClaSS] = []
     
-//    static var classes:[ClaSS] = [ClaSS(name: "iOS", sheets: [Sheet(name: "11/17/2017"), Sheet(name: "11/15/2017"), Sheet(name: "11/13/2017")]), ClaSS(name: "Android", sheets: [Sheet(name: "11/17/2017"), Sheet(name: "11/15/2017"), Sheet(name: "11/13/2017")])]
+    static var classes:[ClaSS] = [ClaSS(name: "iOS", sheets: [Sheet(name: Date())], classTiming: "12:00"), ClaSS(name: "Android", sheets: [Sheet(name: Date())], classTiming: "12:00")]
 
     static func numClasses()->Int {
         return classes.count
@@ -31,7 +31,7 @@ class Professor {
     
     // adds a new bird
     static func addNewSheet(_ sheet:Sheet) {
-        let attTVC:AttendanceSheetsTableViewController = AttendanceSheetsTableViewController()
-        addNewClass(ClaSS(name: attTVC.claSS.name, sheets: [], classTiming: attTVC.claSS.classTiming))
+        //let attTVC:AttendanceSheetsTableViewController = AttendanceSheetsTableViewController()
+        addNewClass(ClaSS(name: AttendanceSheetsTableViewController.claSS.name, sheets: [], classTiming: AttendanceSheetsTableViewController.claSS.classTiming))
     }
 }

@@ -29,6 +29,12 @@ class StudentProfileViewController: UIViewController {
         phoneLBL.text! = StudentProfileViewController.student.phone
         emailLBL.text! = StudentProfileViewController.student.email
     }
+    override func viewWillAppear(_ animated: Bool) {
+        nameLBL.text! = StudentProfileViewController.student.name
+        attendanceLBL.text! = "\(StudentProfileViewController.student.attendance)"
+        phoneLBL.text! = StudentProfileViewController.student.phone
+        emailLBL.text! = StudentProfileViewController.student.email
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -43,7 +43,7 @@ class AddNewClassViewController: UIViewController {
 //    }
     
     @IBAction func addNewClass(sender: Any){
-        let classToAdd = ClaSS(name: courseTF.text!, sheets: [], classTiming: classTimTF.text!)
+        let classToAdd = ClaSS(name: courseTF.text!, sheets: [Sheet()], classTiming: classTimTF.text!)
         Professor.addNewClass(classToAdd)
         self.dismiss(animated: true, completion: nil)
     }

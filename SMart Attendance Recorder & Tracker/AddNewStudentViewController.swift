@@ -1,18 +1,14 @@
 //
-//  EditStudentProfileViewController.swift
+//  AddNewStudentViewController.swift
 //  SMart Attendance Recorder & Tracker
 //
-//  Created by Chris Moody  on 12/7/17.
+//  Created by Chris Moody  on 12/8/17.
 //  Copyright © 2017 Aditya Srimat Tirumala Pallerlamudi. All rights reserved.
 //
 
 import UIKit
 
-class EditStudentProfileViewController: UIViewController {
-
-    
-    var student = StudentProfileViewController.student
-    
+class AddNewStudentViewController: UIViewController {
     @IBOutlet weak var nameTF: UITextField!
     @IBOutlet weak var attendanceTF: UITextField!
     @IBOutlet weak var phoneTF: UITextField!
@@ -20,10 +16,6 @@ class EditStudentProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameTF.text! = student!.name
-        attendanceTF.text! = String(student!.attendance)
-        phoneTF.text! = student!.phone
-        emailTF.text! = student!.email
 
         // Do any additional setup after loading the view.
     }
@@ -32,26 +24,26 @@ class EditStudentProfileViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func cancelBTTN(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
     @IBAction func saveBTTN(_ sender: Any) {
         if (nameTF.text! != "" && nameTF.text != nil) && (attendanceTF.text! != "" && attendanceTF.text != nil) && (phoneTF.text! != "" && phoneTF.text != nil) && (emailTF.text! != "" && emailTF.text != nil) {
-        StudentProfileViewController.saveNewInfo( nameTF.text!, emailTF.text!, phoneTF.text!, Double(attendanceTF.text!)!)
-        self.dismiss(animated: true, completion: nil)
+            
+            StudentsViewController.students.append(Student(nameTF.text!, Double(attendanceTF.text!)!, phoneTF.text!, emailTF.text!))
+            self.dismiss(animated: true, completion: nil)
         }
         else{
             let alert = UIAlertController(title: "Uh oh!", message: "Please enter valid text in the feilds before saving.", preferredStyle: .alert)
             let acceptAction = UIAlertAction(title: "Okay", style: .default) { (alert: UIAlertAction!) -> Void in
             }
             alert.addAction(acceptAction)
-    
+            
             present(alert, animated: true, completion:nil)
         }
     }
-    
 
+    
+    @IBAction func cancelBTTN(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 

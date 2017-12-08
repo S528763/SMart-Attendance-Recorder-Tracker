@@ -48,7 +48,7 @@ class ClassesTableViewController: UIViewController, UITableViewDataSource, UITab
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let sheetsFound:AttendanceSheetsTableViewController = AttendanceSheetsTableViewController()
-        sheetsFound.claSS = Professor.classNum(indexPath.row)
+        AttendanceSheetsTableViewController.claSS = Professor.classNum(indexPath.row)
         self.navigationController?.pushViewController(sheetsFound, animated: true)
     }
     

@@ -10,7 +10,9 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
-    static var info: [String] = ["Teacher John", "johnTeacher@email.com", "+1 (888) 123 4567"]
+    var claSS:ClaSS!
+    
+    static var info: [String] = ["Aditya STP", "stp.aditya@gmail.com", "+1 (000) 000 0000"]
     
     @IBOutlet weak var nameLBL: UILabel!
     @IBOutlet weak var emailLBL: UILabel!
@@ -18,10 +20,21 @@ class SettingsViewController: UIViewController {
     
     
     @IBAction func deleteSheetBTN(_ sender: Any) {
+        let alert = UIAlertController(title: "Delete All Sheets", message: "Are you sure you want to delete all sheets?", preferredStyle: .alert)
+        let clearAction = UIAlertAction(title: "Delete", style: .destructive) { (alert: UIAlertAction!) -> Void in
+            //Needs to be uncommented below when sheets is up and working.
+            //self.claSS.sheets = []
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default) { (alert: UIAlertAction!) -> Void in
+            //print("You pressed Cancel")
+        }
         
+        alert.addAction(clearAction)
+        alert.addAction(cancelAction)
+        
+        present(alert, animated: true, completion:nil)
     }
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

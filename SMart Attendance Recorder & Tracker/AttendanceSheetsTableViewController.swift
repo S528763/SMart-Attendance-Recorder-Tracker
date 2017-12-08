@@ -12,7 +12,7 @@ class AttendanceSheetsTableViewController: UIViewController, UITableViewDelegate
     
     @IBOutlet weak var tableView: UITableView!
     
-    var claSS:ClaSS!
+    static var claSS:ClaSS!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,12 +37,12 @@ class AttendanceSheetsTableViewController: UIViewController, UITableViewDelegate
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return claSS.sheets.count
+        return AttendanceSheetsTableViewController.claSS.sheets.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "sheets_cell", for: indexPath)
-        cell.textLabel?.text = "\(claSS.sheets[indexPath.row].name)"
+        cell.textLabel?.text = "\(AttendanceSheetsTableViewController.claSS.sheets[indexPath.row].name)"
         return cell
     }
     
@@ -63,10 +63,10 @@ class AttendanceSheetsTableViewController: UIViewController, UITableViewDelegate
         
         if segue.identifier == "Today_Attendance_View_Controller" {
             let sheetVC = segue.destination as! TodayAttendanceViewController
-            sheetVC.sheet = claSS.sheets[(tableView.indexPathForSelectedRow?.row)!]
+            sheetVC.sheet = AttendanceSheetsTableViewController.claSS.sheets[(tableView.indexPathForSelectedRow?.row)!]
         } else {
             let addNewSheetVC = segue.destination as! TakeAttendanceViewController
-            addNewSheetVC.claSS = claSS
+            addNewSheetVC.claSS = AttendanceSheetsTableViewController.claSS
         }
     }
     

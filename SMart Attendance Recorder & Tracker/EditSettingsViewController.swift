@@ -43,9 +43,9 @@ class EditSettingsViewController: UIViewController {
     }
     
     func saveNewInfo(){
-        info[0] = nameTF.text!
-        info[1] = emailTF.text!
-        info[2] = phoneNumberTF.text!
+        SettingsViewController.info[0] = nameTF.text!
+        SettingsViewController.info[1] = emailTF.text!
+        SettingsViewController.info[2] = phoneNumberTF.text!
     }
 
     /*
