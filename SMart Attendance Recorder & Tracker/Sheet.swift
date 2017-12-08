@@ -10,14 +10,14 @@ import Foundation
 
 class Sheet: Equatable {
     
-    var name:Date!
+    var name:String!
     
-    init(name:Date?) {
+    init(name:String) {
         self.name = name
     }
     
     convenience init() {
-        self.init(name: Date())
+        self.init(name: "12/08/2017")
     }
     
     static func ==(lhs: Sheet, rhs: Sheet) -> Bool {

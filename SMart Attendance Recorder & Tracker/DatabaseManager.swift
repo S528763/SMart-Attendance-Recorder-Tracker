@@ -10,6 +10,8 @@ import Foundation
 
 let dbManager:DatabaseManager = DatabaseManager()
 
+
+
 class DatabaseManager {
     
     let APPLICATION_ID = "033D8EE3-DAB9-AD58-FF40-9251E379F700"

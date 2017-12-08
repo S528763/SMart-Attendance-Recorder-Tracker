@@ -14,6 +14,7 @@ class TakeAttendanceViewController: UIViewController, UITableViewDataSource, UIT
     var claSS:ClaSS!
     
     var classData = AddNewClassViewController.classData
+    var stVC = StudentsViewController()
     
     @IBOutlet weak var courseLBL: UILabel!
     @IBOutlet weak var classTimLBL: UILabel!
@@ -56,8 +57,8 @@ class TakeAttendanceViewController: UIViewController, UITableViewDataSource, UIT
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "newsheet_cell", for: indexPath) as! SwitchTableViewCell
-        cell.studentLBL.text = "\(Professor.classes[indexPath.row].name)"
-        cell.percLBL.text = "\(Professor.classes[indexPath.row].sheets[indexPath.row].name!)"
+        cell.studentLBL.text = stVC.students[indexPath.row].name
+        cell.percLBL.text = "\(stVC.students[indexPath.row].attendance)"
         cell.presentAbsSWT.setOn(true, animated: true)
         return cell
     }
@@ -72,10 +73,11 @@ class TakeAttendanceViewController: UIViewController, UITableViewDataSource, UIT
      }
      */
     
-    @IBAction func addNewSheet(_ sender: Any) {
-        let sheetToAdd = Sheet(name: Date())
-        Professor.addNewSheet(sheetToAdd)
-        dismiss(animated: true, completion: nil)
-    }
+//    @IBAction func addNewSheet(_ sender: Any) {
+//        let sheetToAdd = Sheet(name: "12/08/2017")
+//        Professor.addNewSheet(sheetToAdd)
+//        todayDate = "12/08/2017"
+//        dismiss(animated: true, completion: nil)
+//    }
 }
 

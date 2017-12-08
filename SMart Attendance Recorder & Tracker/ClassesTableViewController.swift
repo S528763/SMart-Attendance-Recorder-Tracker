@@ -34,22 +34,16 @@ class ClassesTableViewController: UIViewController, UITableViewDataSource, UITab
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return Professor.numClasses()
+        return Professor.classes.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "class_cell", for: indexPath)
-        let claSS = Professor.classNum(indexPath.row)
+        let claSS = Professor.classes[indexPath.row]
         cell.textLabel?.text = claSS.name
         cell.detailTextLabel?.text = claSS.classTiming
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let sheetsFound:AttendanceSheetsTableViewController = AttendanceSheetsTableViewController()
-        sheetsFound.claSS = Professor.classNum(indexPath.row)
-        self.navigationController?.pushViewController(sheetsFound, animated: true)
     }
     
     // to give an endpoint for the unwind segue
@@ -58,13 +52,13 @@ class ClassesTableViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        // Get the new view controller using segue.destinationViewController.
-//        // Pass the selected object to the new view controller.
-//        
-//        if segue.identifier == "Attendance_Sheets_Table_View_Controller" {
-//            let attsheetsTVC:AttendanceSheetsTableViewController = segue.destination as! AttendanceSheetsTableViewController
-//            attsheetsTVC.claSS = Professor.classNum(tableView.indexPathForSelectedRow!.row)
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "Attendance_Sheets_Table_View_Controller" {
+            let attsheetsTVC = segue.destination as! AttendanceSheetsTableViewController
+            attsheetsTVC.claSS = Professor.classes[(tableView.indexPathForSelectedRow?.row)!]
+        }
+    }
 }
