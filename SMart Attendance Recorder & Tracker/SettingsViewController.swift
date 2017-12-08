@@ -24,10 +24,12 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        refreshData()
+
         // Do any additional setup after loading the view.
         
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        refreshData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -40,6 +42,11 @@ class SettingsViewController: UIViewController {
         emailLBL.text = SettingsViewController.info[1]
         phoneNumberLBL.text = SettingsViewController.info[2]
     }
+    
+    
+    @IBAction func cancelEditProfessorProfile(segue:UIStoryboardSegue){
+    }
+    
     
     /*
      // MARK: - Navigation

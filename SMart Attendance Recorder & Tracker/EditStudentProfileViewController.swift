@@ -1,52 +1,44 @@
 //
-//  EditSettingsViewController.swift
+//  EditStudentProfileViewController.swift
 //  SMart Attendance Recorder & Tracker
 //
-//  Created by Moody,Christopher L on 10/19/17.
+//  Created by Chris Moody  on 12/7/17.
 //  Copyright © 2017 Aditya Srimat Tirumala Pallerlamudi. All rights reserved.
 //
 
 import UIKit
 
-class EditSettingsViewController: UIViewController {
+class EditStudentProfileViewController: UIViewController {
+
     
-    var info: [String] = SettingsViewController.info
+    var student = StudentProfileViewController.student
     
-    //outlets
     @IBOutlet weak var nameTF: UITextField!
+    @IBOutlet weak var attendanceTF: UITextField!
+    @IBOutlet weak var phoneTF: UITextField!
     @IBOutlet weak var emailTF: UITextField!
-    @IBOutlet weak var phoneNumberTF: UITextField!
-    
-    
-    @IBAction func cancelBTTN(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
-    @IBAction func saveBTTN(_ sender: Any) {
-        saveNewInfo()
-        self.dismiss(animated: true, completion: nil)
-    }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        nameTF.text = info[0]
-        emailTF.text = info[1]
-        phoneNumberTF.text = info[2]
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    func saveNewInfo(){
-        info[0] = nameTF.text!
-        info[1] = emailTF.text!
-        info[2] = phoneNumberTF.text!
+    @IBAction func cancelBTTN(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func saveBTTN(_ sender: Any) {
+        if nameTF.text! != "" && nameTF.text != nil || attendanceTF.text! != "" && attendanceTF.text != nil || phoneTF.text! != "" && phoneTF.text != nil || emailTF.text! != "" && emailTF.text != nil {
+        StudentProfileViewController.saveNewInfo( nameTF.text!, emailTF.text!, phoneTF.text!, Double(attendanceTF.text!)!)
+        self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
 
     /*
     // MARK: - Navigation

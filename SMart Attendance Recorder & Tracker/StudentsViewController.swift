@@ -12,18 +12,18 @@ class StudentsViewController: UIViewController, UITableViewDataSource, UITableVi
     
     //var tableView = UITableView().self
     var old_students = ["Chris", "Karthic", "Aditya", "John", "Sally", "Sue", "Amy", "Debra"]
-    var students = [ Student("Chris Moody", 0.0, "641-871-0758", "s524268@nwmissouri.edu"), Student("Karthic Goud", 0.0, "000-000-0000", "s111111@nwmissouri.edu"), Student("Aditya Srimat Tirumala Pallerlamudi", 0.0, "111-111-1111", "s222222@nwmissouri.edu"), Student("John Smith", 0.0, "123-456-7890", "email@nwmissouri.edu"), Student("Sally Ann", 0.0, "123-456-7890", "email@nwmissouri.edu"), Student("Sue Richardson", 0.0, "123-456-7890", "email@nwmissouri.edu"), Student("Amy Lee", 0.0, "123-456-7890", "email@nwmissouri.edu"), Student("Debra Wheeler ", 0.0, "123-456-7890", "email@nwmissouri.edu") ]
+    static var students = [ Student("Chris Moody", 0.0, "641-871-0758", "s524268@nwmissouri.edu"), Student("Karthic Goud", 0.0, "000-000-0000", "s111111@nwmissouri.edu"), Student("Aditya Srimat Tirumala Pallerlamudi", 0.0, "111-111-1111", "s222222@nwmissouri.edu"), Student("John Smith", 0.0, "123-456-7890", "email@nwmissouri.edu"), Student("Sally Ann", 0.0, "123-456-7890", "email@nwmissouri.edu"), Student("Sue Richardson", 0.0, "123-456-7890", "email@nwmissouri.edu"), Student("Amy Lee", 0.0, "123-456-7890", "email@nwmissouri.edu"), Student("Debra Wheeler ", 0.0, "123-456-7890", "email@nwmissouri.edu") ]
     
     var selectedStudent:Student!
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return students.count
+        return StudentsViewController.students.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "student_cell")// in lieu of UITableViewCell()
-        cell!.textLabel?.text = students[indexPath.row].name
+        cell!.textLabel?.text = StudentsViewController.students[indexPath.row].name
         return cell!
     }
     
@@ -39,12 +39,12 @@ class StudentsViewController: UIViewController, UITableViewDataSource, UITableVi
         // Dispose of any resources that can be recreated.
     }
     
-    func cancel(unwindSegue: UIStoryboardSegue){
+    func cancelStudentProfile(unwindSegue: UIStoryboardSegue){
         self.dismiss(animated: true) 
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedStudent = students[indexPath.row]
+        selectedStudent = StudentsViewController.students[indexPath.row]
         performSegue(withIdentifier: "student_profile_view_controller", sender: indexPath)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -56,8 +56,7 @@ class StudentsViewController: UIViewController, UITableViewDataSource, UITableVi
              birdVC.bird = county.birds![(tableView.indexPathForSelectedRow?.row)!]
          }*/
         if segue.identifier == "student_profile_view_controller"{
-            let spVC = segue.destination as! StudentProfileViewController
-            spVC.student = selectedStudent
+            StudentProfileViewController.student = selectedStudent
         }
         
     }
