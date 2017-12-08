@@ -31,7 +31,7 @@ class Professor {
     
     // adds a new bird
     static func addNewSheet(_ sheet:Sheet) {
-        let attTVC:AttendanceSheetsTableViewController = AttendanceSheetsTableViewController()
-        addNewClass(ClaSS(name: attTVC.claSS.name, sheets: [], classTiming: attTVC.claSS.classTiming))
+        //let attTVC:AttendanceSheetsTableViewController = AttendanceSheetsTableViewController()
+        addNewClass(ClaSS(name: AttendanceSheetsTableViewController.claSS.name, sheets: [], classTiming: AttendanceSheetsTableViewController.claSS.classTiming))
     }
 }

@@ -10,11 +10,12 @@ import UIKit
 
 class StudentProfileViewController: UIViewController {
     
-    var student:Student!
+    static var student:Student!
 
     @IBAction func cancel(_ sender: Any) {
         self.dismiss(animated: true)
     }
+    
     @IBOutlet weak var nameLBL: UILabel!
     @IBOutlet weak var attendanceLBL: UILabel!
     @IBOutlet weak var phoneLBL: UILabel!
@@ -23,16 +24,31 @@ class StudentProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        nameLBL.text! = student.name
-        attendanceLBL.text! = "\(student.attendance)"
-        phoneLBL.text! = student.phone
-        emailLBL.text! = student.email
-        
+        nameLBL.text! = StudentProfileViewController.student.name
+        attendanceLBL.text! = "\(StudentProfileViewController.student.attendance)"
+        phoneLBL.text! = StudentProfileViewController.student.phone
+        emailLBL.text! = StudentProfileViewController.student.email
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        nameLBL.text! = StudentProfileViewController.student.name
+        attendanceLBL.text! = "\(StudentProfileViewController.student.attendance)"
+        phoneLBL.text! = StudentProfileViewController.student.phone
+        emailLBL.text! = StudentProfileViewController.student.email
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    static func saveNewInfo(_ name:String, _ email:String, _ phone:String, _ attendance:Double){
+        StudentProfileViewController.student.name = name
+        StudentProfileViewController.student.email = email
+        StudentProfileViewController.student.phone = phone
+        StudentProfileViewController.student.attendance = attendance
+    }
+    @IBAction func cancelBTTN(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     /*

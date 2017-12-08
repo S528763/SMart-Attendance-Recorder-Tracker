@@ -46,8 +46,6 @@ class EditSettingsViewController: UIViewController {
         SettingsViewController.info[0] = nameTF.text!
         SettingsViewController.info[1] = emailTF.text!
         SettingsViewController.info[2] = phoneNumberTF.text!
-
-        
     }
 
     /*

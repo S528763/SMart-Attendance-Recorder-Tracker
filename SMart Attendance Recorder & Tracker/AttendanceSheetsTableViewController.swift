@@ -12,7 +12,7 @@ class AttendanceSheetsTableViewController: UIViewController, UITableViewDelegate
     
 //    @IBOutlet weak var tableView: UITableView!
     
-    var claSS:ClaSS!
+    static var claSS:ClaSS!
     
     override func viewDidLoad() {
         super.viewDidLoad()
