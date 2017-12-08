@@ -14,7 +14,7 @@ class StudentsViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBOutlet weak var tableView: UITableView!
     
     var old_students = ["Chris", "Karthic", "Aditya", "John", "Sally", "Sue", "Amy", "Debra"]
-    var students = [ Student("Chris Moody", 97.0, "641-871-0758", "s524268@nwmissouri.edu"), Student("Karthik Goud", 99.0, "000-000-0000", "s111111@nwmissouri.edu"), Student("Aditya S T P", 95.0, "111-111-1111", "s222222@nwmissouri.edu"), Student("John Smith", 90.0, "123-456-7890", "email@nwmissouri.edu"), Student("Sally Ann", 80.0, "123-456-7890", "email@nwmissouri.edu"), Student("Sue Richardson", 80.0, "123-456-7890", "email@nwmissouri.edu"), Student("Amy Lee", 100.0, "123-456-7890", "email@nwmissouri.edu"), Student("Debra Wheeler ", 70.0, "123-456-7890", "email@nwmissouri.edu") ]
+    static var students = [ Student("Chris Moody", 97.0, "641-871-0758", "s524268@nwmissouri.edu"), Student("Karthik Goud", 99.0, "000-000-0000", "s111111@nwmissouri.edu"), Student("Aditya S T P", 95.0, "111-111-1111", "s222222@nwmissouri.edu"), Student("John Smith", 90.0, "123-456-7890", "email@nwmissouri.edu"), Student("Sally Ann", 80.0, "123-456-7890", "email@nwmissouri.edu"), Student("Sue Richardson", 80.0, "123-456-7890", "email@nwmissouri.edu"), Student("Amy Lee", 100.0, "123-456-7890", "email@nwmissouri.edu"), Student("Debra Wheeler ", 70.0, "123-456-7890", "email@nwmissouri.edu") ]
     
     var selectedStudent:Student!
     

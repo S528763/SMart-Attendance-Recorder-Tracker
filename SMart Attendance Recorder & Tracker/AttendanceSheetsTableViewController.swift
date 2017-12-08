@@ -10,18 +10,18 @@ import UIKit
 
 class AttendanceSheetsTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-//    @IBOutlet weak var tableView: UITableView!
+    //    @IBOutlet weak var tableView: UITableView!
     
-    static var claSS:ClaSS!
+    var claSS:ClaSS!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = claSS.name
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//
-//    }
+    //    override func viewWillAppear(_ animated: Bool) {
+    //
+    //    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -42,7 +42,7 @@ class AttendanceSheetsTableViewController: UIViewController, UITableViewDelegate
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "sheets_cell", for: indexPath)
-       // cell.textLabel?.text = tdVC.todayDate
+        // cell.textLabel?.text = tdVC.todayDate
         //"\(claSS.sheets[indexPath.row].name)"
         let sheet = claSS.sheets[indexPath.row]
         cell.textLabel?.text = "12/08/2017"
@@ -60,18 +60,19 @@ class AttendanceSheetsTableViewController: UIViewController, UITableViewDelegate
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        // Get the new view controller using segue.destinationViewController.
-//        // Pass the selected object to the new view controller.
-//
-//        if segue.identifier == "Today_Attendance_View_Controller" {
-//            let sheetVC = segue.destination as! TodayAttendanceViewController
-//            sheetVC.sheet = claSS.sheets[i]
-//        } else {
-//            let addNewSheetVC = segue.destination as! TakeAttendanceViewController
-//            addNewSheetVC.claSS = claSS
-//        }
-//    }
+    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    //        // Get the new view controller using segue.destinationViewController.
+    //        // Pass the selected object to the new view controller.
+    //
+    //        if segue.identifier == "Today_Attendance_View_Controller" {
+    //            let sheetVC = segue.destination as! TodayAttendanceViewController
+    //            sheetVC.sheet = claSS.sheets[i]
+    //        } else {
+    //            let addNewSheetVC = segue.destination as! TakeAttendanceViewController
+    //            addNewSheetVC.claSS = claSS
+    //        }
+    //    }
     
     
 }
+
