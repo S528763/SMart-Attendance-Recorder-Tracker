@@ -13,6 +13,7 @@ class AttendanceSheetsTableViewController: UIViewController, UITableViewDelegate
     //    @IBOutlet weak var tableView: UITableView!
     
     var claSS:ClaSS!
+    var tAVC = TakeAttendanceViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,8 +45,8 @@ class AttendanceSheetsTableViewController: UIViewController, UITableViewDelegate
         let cell = tableView.dequeueReusableCell(withIdentifier: "sheets_cell", for: indexPath)
         // cell.textLabel?.text = tdVC.todayDate
         //"\(claSS.sheets[indexPath.row].name)"
-        let sheet = claSS.sheets[indexPath.row]
-        cell.textLabel?.text = "12/08/2017"
+        let sheet = Professor.classes[indexPath.row].sheets[indexPath.row].name
+        cell.textLabel?.text = sheet
         return cell
     }
     

@@ -17,9 +17,6 @@ class AddNewClassViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // self.tabBarController?.tabBar.isHidden = false
-        // Do any additional setup after loading the view.
     }
     
     override func didReceiveMemoryWarning() {
@@ -35,13 +32,7 @@ class AddNewClassViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
-//    @IBAction func addNewClass(_ sender: Any) {
-//        // add new class
-//        dbManager.addNewClass(named: courseTF.text!, timing: classTimTF.text!)
-//        dismiss(animated: true, completion: nil)
-//    }
-    
+       
     @IBAction func addNewClass(sender: Any){
         let classToAdd = ClaSS(name: courseTF.text!, sheets: [], classTiming: classTimTF.text!)
         Professor.addNewClass(classToAdd)
