@@ -894,7 +894,7 @@
                                     <navigationItem title="Register" id="mWB-EW-pBz">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="vZF-T5-2Jr">
                                             <connections>
-                                                <segue destination="1tK-ip-Quc" kind="unwind" unwindAction="cancelRegistrationWithSegue:" id="cTx-wM-JvT"/>
+                                                <action selector="cancelRegistration:" destination="1tK-ip-Quc" id="fLx-H0-6b3"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="n12-jl-Er7">
@@ -1096,7 +1096,7 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="JHr-av-L8x">
                                             <connections>
-                                                <action selector="addNewSheet:" destination="5Dl-D6-kE9" id="sCb-NF-Wa3"/>
+                                                <action selector="attendanceDone:" destination="5Dl-D6-kE9" id="rdW-Ny-OCV"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>

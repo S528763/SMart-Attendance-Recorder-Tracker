@@ -15,6 +15,7 @@ class TakeAttendanceViewController: UIViewController, UITableViewDataSource, UIT
     
     var classData = AddNewClassViewController.classData
     var stVC = StudentsViewController()
+    var todayDate:String!
     
     @IBOutlet weak var courseLBL: UILabel!
     @IBOutlet weak var classTimLBL: UILabel!
@@ -44,6 +45,7 @@ class TakeAttendanceViewController: UIViewController, UITableViewDataSource, UIT
     }
     
     @IBAction func attendanceDone(_ sender: Any) {
+        todayDate = "12/08/2017"
         self.dismiss(animated: true, completion: nil)
     }
     

@@ -72,10 +72,13 @@ class LoginPageViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func cancelForgotPassword(segue:UIStoryboardSegue){
+    @IBAction func cancelForgotPassword(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func cancelRegistration(segue:UIStoryboardSegue){
+    @IBAction func cancelRegistration(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
+    
 }
 
